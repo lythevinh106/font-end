@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --width-main: 80%;
+  --height-header-top: 99px;
+  --height-header-main: 37px;
+}
+
+.header {
+  width: var(--width-main);
+  margin: 0 auto;
+}
+
+.header__top {
+  background-color: #272f54;
+  height: var(--height-header-top);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.header__top img {
+  display: block;
+}
+
+.header__main {
+  height: var(--height-header-main);
+  background-color: #cb7802;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.header__main--nav {
+  width: 60%;
+}
+.header__main--nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 12px;
+  color: #fefbfb;
+  justify-content: space-evenly;
+  line-height: var(--height-header-main);
+}
+
+.header__main--search {
+  width: 25%;
+}
+.header__main--search input {
+  display: block;
+  margin: auto auto;
+
+  width: 204px;
+  height: 20px;
+}
+
+.header__main--btn {
+}
+.header__main--btn-container {
+  display: flex;
+  align-items: center;
+}
+.header__main--btn button {
+  display: block;
+  color: #fefbfb;
+  width: 94px;
+  height: 20px;
+  background-color: #272f54;
+}
+
+.banner {
+  margin: 0 auto;
+  width: var(--width-main);
+  height: 265px;
+  padding: 10px 0;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: var(--width-main);
+  margin: 0 auto;
+}
+.content__hoctap {
+  margin-bottom: 13px;
+}
+
+.content-title-primary {
+  color: #272f54;
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.content__hoctap-desc {
+  display: flex;
+  justify-content: space-between;
+}
+.content__desc-primary {
+  width: 31%;
+  padding: 15px 25px;
+  box-shadow: 0px 0px 5px 0px grey;
+}
+.content__desc-primary img {
+  width: 100%;
+}
+
+.desc-primary {
+  color: #ad3f00;
+  font-size: 16px;
+  padding: 16px 0;
+}
+
+.text-primary {
+  font-size: 13px;
+  padding: ;
+}
+
+.footer {
+  text-align: center;
+  background-color: #272f54;
+  margin: 0 auto;
+  width: var(--width-main);
+}
+.footer p {
+  padding: 17px 0;
+  color: white;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<style>
+    .div1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+
+    }
+
+    .div2 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+
+        margin-top: 200px;
+    }
+
+    .move {
+        width: 200px;
+        height: 50px;
+        background-color: black;
+
+        margin-top: 20px;
+        margin-left: 200px;
+        z-index: 2;
+
+
+    }
+
+    .container {
+        position: relative;
+    }
+
+
+
+    .the1 {
+        width: 600px;
+        height: 600px;
+        border: 1px solid red;
+        position: relative;
+
+
+    }
+
+    .the2 {
+        width: 400px;
+        height: 400px;
+        border: 1px solid grey;
+
+    }
+
+
+    .the3 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid yellow;
+
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="div1">
+
+
+        </div>
+        <div class="div2"></div>
+
+
+
+        <div class="move"></div>
+    </div>
+
+    <!-- offset parent-->
+
+
+
+    <div class="the1">
+        <div class="the2">
+            <div class="the3">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    /*.offset(): Lấy tọa độ hiện tại của thành phần đầu tiên, hoặc thiết lập
+     các tọa độ của từng thành phần trong tập hợp các thành phần phù hợp liên quan đến văn bản.*/
+
+
+    var a = $(".div2").offset({// se tra ve 1 object mang 2 toa do vs element cha chua position gan nhat
+
+
+    })
+    /*
+    var a = $(".div2").offset({
+        top: 200, left: 300
+    })
+
+    console.log(a)*/
+
+
+
+    /*.offsetParent(): Lấy một thành phần "tổ tiên" gần nhất có sử dụng thuộc tính position,
+    những thành phần được lấy không phân biệt position: relative, absolute hay fixed.*/
+
+
+    var c = $(".the3").offsetParent()
+
+    console.log(c)// o day se in ra the 1 vi the 1 co position
+
+</script>
+
+
+
+</html>

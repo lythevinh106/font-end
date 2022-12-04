@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+
+<body>
+    <button class="btn"></button>
+    <button class="btn2"></button>
+
+</body>
+
+<script>
+
+    // su kien click có kịch bản  : truyền vào nhièu function và sẽ lặp lại theo tuàn tự 
+
+    $('.btn').toggle()
+
+        /// su kien voi ban phim
+
+        // keypress: khi go phim
+        // keydown: thao tac de phim xuong
+        // keyup: khi nhả phim(sau khi de xuong)
+
+        ////////////// su kien bieu mau////
+
+        // focus: khi dua con tro vào ô input 
+        //blur: khi hủy dua con tro vao o input( khi clik ra ben ngoai)
+
+        //change:khi thay doi gia tri cua the input...(chi sau khi blur) .. khi nguoi ta thay doi du lieu..
+
+        //select: khi tô đen 1 đoạn văn bản nào đáy
+        //submit: su kien bat dau submit form
+
+
+
+        .
+
+
+
+
+        //////////////////
+
+        $('.btn').bind('event1', 'event2', function () {// khai bao 2 sư kien cung 1 luc
+
+        })
+    $('.btn').unbind('event1')// huy su kien
+
+    $('.btn').unbind('event1', function () {// khong con thuc hien ham khuy huy event 1
+
+    })
+
+
+
+
+
+</script>
+
+
+
+</html>

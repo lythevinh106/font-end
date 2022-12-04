@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
+    <style>
+        span {
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post" action="" id="form_register">
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>
+                    <input class="username" type="text" name="username" id="username" value="" />
+                    <span id="username_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td>
+                    <input class="password" type="password" name="password" id="password" value="" />
+                    <span id="password_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Nhập lại mật khẩu:</td>
+                <td>
+                    <input class="re-password" type="password" name="re-password" id="re_password" value="" />
+                    <span id="re_password_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input class="email" type="text" name="email" id="email" value="" />
+                    <span id="email_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Điện thoại:</td>
+                <td>
+                    <input type="text" class="phone" name="phone" id="phone" value="" />
+                    <span id="phone_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ:</td>
+                <td>
+                    <input type="text" class="address" name="address" id="address" value="" />
+                    <span id="address_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="register" id="register" value="Đăng ký" /></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+
+
+        $("#form_register").submit((e) => {
+
+
+            var usernameVl = $(".username").val()
+            var passwordVl = $(".password").val()
+            var rePasswordVl = $(".re-password").val()
+            var emailVl = $(".email").val()
+            var addressVl = $(".address").val()
+            var phoneVl = $(".phone").val()
+            if (usernameVl.length == 0 || usernameVl.length < 5) {
+                errShow(".username", "vui long nhap vao dung ten", e);
+            }
+
+            else {
+                $(".username").next().text("");
+            }
+
+
+
+
+            if (passwordVl.length == 0 || passwordVl.length < 5) {
+                errShow(".password", "vui long nhap vao dung mat khau", e);
+                console.log(`day la sss ${passwordVl}`)
+            }
+
+            else {
+                $(".password").next().text("");
+            }
+
+
+
+            if (rePasswordVl.length == 0 || rePasswordVl != passwordVl) {
+                errShow(".re-password", "mat khau nhap lai khong trung khop", e);
+
+
+            }
+
+            else {
+                $(".re-password").next().text("");
+            }
+
+            if (!emailVl.includes("@") || emailVl.length == 0) {
+                errShow(".email", "email khong duoc de trong va phai dung dinh dang", e);
+            }
+            else {
+                $(".email").next().text("");
+            }
+
+
+            if (phoneVl.length < 7 || !Number(phoneVl)) {
+                errShow(".phone", "so dien thoai k hop le", e);
+            }
+            else {
+                $(".phone").next().text("");
+            }
+
+
+
+
+
+        })
+
+        var errShow = (element, text, e) => {
+            $(element).next().html(text);
+            e.preventDefault()
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

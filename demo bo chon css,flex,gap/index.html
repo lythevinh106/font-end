@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    ul>li {
+        color: red
+    }
+
+    .li2+li {
+        color: blue
+    }
+
+    .li1~li {
+        color: yellow
+    }
+
+    .li1::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+
+    }
+
+
+
+    .li1:hover::after {
+        background-color: blue;
+    }
+
+
+    .li1:hover+li {
+        color: blue;
+    }
+
+    li {
+        transition: all .9s linear;
+    }
+</style>
+
+<body>
+
+    <ul>
+        <li class="li1"> the li cha<span> the span</span></li>
+        <li class="li2"> the li cha<span> the span <ul>
+                    <li>
+                        the con 1
+                    <li>
+                    <li>
+                        the con 1
+                    <li>
+                </ul> </span></li>
+        <li class="li3"> the li cha<span> the span </span></li>
+        <li> the li cha<span> the span </span></li>
+    </ul>
+</body>
+
+</html>

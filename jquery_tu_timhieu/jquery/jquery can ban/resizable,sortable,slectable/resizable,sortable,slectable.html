@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="thu vien UI/jquery-ui.js"></script>
+
+</head>
+
+<style>
+    .MyConect {
+        margin: 100px 0px 0px 50px;
+        float: left;
+    }
+
+    li {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100px;
+        border: 1px solid;
+        display: block;
+        text-align: center;
+    }
+
+    .ui-selected {
+        /*sau khi chon*/
+        background-color: black;
+        color: white;
+    }
+
+    .ui-selecting {
+        /*dang chon*/
+        background-color: grey;
+    }
+</style>
+
+
+<body>
+    <div id="Resizable_1" style="border: 1px solid ; width:200px ; height:100px">a</div>
+    <br>
+    <div id="Resizable_2" style="border: 1px solid ; width:200px ; height:100px ; background-color: red;">b</div>
+
+
+
+
+    <ul id="MySorttable" class="MyConect">
+        <li>a-1</li>
+        <li>a-2</li>
+        <li>a-3</li>
+    </ul>
+    <ul id="MySorttable2" class="MyConect">
+        <li>a-4</li>
+        <li>a-5</li>
+        <li>a-6</li>
+    </ul>
+
+
+
+    <br>
+    <ul id="List1" class="MyConect">
+        <li data="1" class="A">a-1</li>
+        <li data="2" class="B">a-2</li>
+        <li data="3" class="A">a-3</li>
+    </ul>
+    <ul id="List2" class="MyConect">
+        <li data="4" class="B">a-4</li>
+        <li data="5" class="A">a-5</li>
+        <li data="6" class="A">a-6</li>
+    </ul>
+
+
+
+
+</body>
+
+<script>
+
+    $("#Resizable_1").resizable({
+
+
+    })
+    $("#Resizable_2").resizable({
+        alsoResize: "#Resizable_1",// day la khi the nay thay doi thi Resizable_1 cung thay doi theo
+        aspectRatio: 4 / 3,//ti le man hinh
+        animate: true,
+        ghost: true,
+
+
+    })
+
+
+
+    //sortable
+
+
+
+    $("#MySorttable").sortable({
+        connectWith: "#MySorttable2",//ket noi voi bang duoi
+
+    })
+
+
+
+    $("#MySorttable2").sortable({
+        connectWith: "#MySorttable",
+        activate: function () {
+            $('#MySorttable2 li').css('background-color', 'red');
+        },
+        deactivate: function () {
+            $('#MySorttable2 li').css('background-color', '');
+        }
+
+    })
+
+
+    //selectable
+
+
+    $("#List1").selectable({
+        filter: ".A",
+        selected: function () {
+            var data = "";
+            $('#List1 .ui-selected').each(function (el, i) {
+                data += $(this).attr("data");
+            });
+            alert(data);
+        }
+    })
+
+
+    $("#List2").selectable({
+
+    })
+
+
+
+
+
+
+</script>
+
+</html>

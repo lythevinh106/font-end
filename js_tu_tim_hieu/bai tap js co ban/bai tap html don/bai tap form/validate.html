@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    span {
+        display: none;
+        color: red;
+    }
+</style>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>ho ten</td>
+                <td><input type="text" id="user-name">
+                    <span>k dung ten</span>
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <td>maykhau</td>
+                <td><input type="password" id="password">
+                    <span>k dung m khau</span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>nhap lai may khau</td>
+                <td><input type="password" id="respassword">
+                    <span>mat khau nhap lai k dung</span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td>so dien thoai</td>
+                <td><input type="number" id="phone">
+                    <span>sdtk hop le</span>
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td>email</td>
+                <td><input type="email" id="email">
+                    <span>email hop le</span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button type="submit" id='btn' onclick="return validate();">
+                        click
+                    </button></td>
+            </tr>
+        </table>
+
+
+
+
+    </form>
+
+</body>
+
+<script src="validateform.js"></script>
+
+</html>

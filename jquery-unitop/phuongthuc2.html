@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<ul>
+    <style>
+        .sub-menu {
+
+            display: none;
+        }
+
+        .box {
+            width: 500px;
+            height: 400px;
+            background-color: red;
+            padding: 10px;
+
+        }
+    </style>
+</ul>
+
+<body>
+
+    <ul id="main-menu">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a>
+            <ul class="sub-menu">
+                <li><a href="">menu2.1</a></li>
+                <li><a href="">menu2.2</a></li>
+                <li><a href="">menu2.2</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">menu3</a></li>
+        <li><a href="">menu4</a>
+            <ul class="sub-menu">
+                <li><a href="">menu4.1</a></li>
+                <li><a href="">menu4.2</a></li>
+                <li><a href="">menu4.2</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">menu5</a></li>
+    </ul>
+
+    <div class="box">box</div>
+
+</body>
+
+<script>
+
+    $("main-menu li").click(function () {
+
+        $(this).children("sub-menu").show();// chon toi con ben trong
+        $(this).children("sub-menu").find("a").css("color", "red");// tim toi tat ca the a la con chau ben trong childred
+
+
+
+    })
+
+    $("main-menu a").click(function () {
+
+        $(this).parents("ul").css("background", "red");//lui ra tat ca to tien cua no
+        return false;
+
+    })
+
+    //lay css va set thuoc tinh
+
+
+    console.log($(".box").css("width"));
+
+
+
+    // phuong thuc kich thuoc : tuong tu nhuw width
+    console.log($(".box").height());// lay do cao la 400
+    console.log($(".box").height(500));// set do cao la 500
+    console.log($(".box").innerHeight())// lay do cao gom paddding
+    console.log($(".box").innerHeight())// lay do cao gom paddding,border
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

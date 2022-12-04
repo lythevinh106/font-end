@@ -1,0 +1,23 @@
+@media only screen and (max-width: 699px){
+
+    	#content-testimonial__desc {
+
+   		width: 100%;
+   		display: flex;
+   		justify-content: space-between;
+   		align-items: flex-start;
+   		margin-top: 40px; 
+   		
+
+
+   	}
+ 
+   #content-features__title h2 {
+   		font-size: 20px;
+   	}
+
+}
+
+@media only screen and (min-width: 700px) and (max-width:1023px) {
+
+}

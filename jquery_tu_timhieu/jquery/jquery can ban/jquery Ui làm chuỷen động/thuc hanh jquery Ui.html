@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</head>
+
+
+<style>
+    .container {
+        display: flex;
+
+    }
+
+    .btn {
+        color: white;
+        padding: 5px 15px;
+        max-width: 150px;
+        background-color: black;
+        margin-left: 40px;
+
+    }
+
+    img {
+        width: 500px;
+        height: 800px;
+    }
+
+
+    .box {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        position: fixed;
+        top: 300px;
+        right: 0;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="btn" id="show">click show</div>
+        <div class="btn" id="hide">click hide</div>
+        <div class="btn" id="toggle">click change</div>
+
+        <div class="btn" id="slide-down">slide-down</div>
+        <div class="btn" id="slide-up">slide-up</div>
+        <div class="btn" id="slide-toggle">slide-toogle</div>
+
+
+        <input type="text" class="btn" id="ft" placeholder="so tu 0 den 1">
+    </div>
+
+
+
+    <img id='image_id' src="anh-banner.jpg" alt="">
+
+    <div class="box"></div>
+
+
+</body>
+
+<script>
+    $('#show').click(() => {
+        $('#image_id').show(300, () => {
+            alert('vinh')// sau khi click thi se hien 
+        });
+    })
+    $('#hide').click(() => {
+        $('#image_id').hide(500);
+    })
+    $('#toggle').click(() => {
+        $('#image_id').toggle(300);
+    })
+    $('#slide-down').click(() => {
+        $('#image_id').slideDown(300);
+    })
+
+    $('#slide-up').click(() => {
+        $('#image_id').slideUp(300);
+    })
+    $('#slide-toggle').click(() => {
+        $('#image_id').slideToggle(300);
+    })
+
+    $('#ft').change(function () {
+        var x = parseFloat($(this).val());
+        console.log(x);
+        $('.box').fadeTo(500, x, () => {
+            alert('vinhh')
+        })
+
+
+
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        background-color: antiquewhite;
+    }
+
+    .container {
+        background-color: aliceblue;
+        width: 700px;
+        padding: 20px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+
+    }
+
+
+    .title {
+        font-size: 50px;
+
+    }
+
+    .form-container {
+        display: flex;
+
+        flex-direction: column;
+        display: none;
+    }
+
+    label {
+
+        display: flex;
+
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    label input {
+        text-align: left;
+    }
+
+    .form-container.active {
+        display: block;
+
+
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <div class="form-container active" id="form1">
+                <h2 id="title">1+1 = mấy</h2>
+                <label> <input type="radio" data="true" class="radio true" name="quiz1">2</label>
+                <label> <input type="radio" id="input2" class="radio" name="quiz1">3</label>
+                <label> <input type="radio" class="radio" name="quiz1">4</label>
+            </div>
+
+            <div class="form-container" id="form2">
+                <h2 id="title">2x2 = mấy</h2>
+                <label> <input type="radio" data="true" class="radio true" name="quiz1">4</label>
+                <label> <input type="radio" class="radio" name="quiz1">6</label>
+                <label> <input type="radio" class="radio" name="quiz1">8</label>
+            </div>
+            <div class="form-container" id="form3">
+                <h2 id="title">3/3 = mấy</h2>
+                <label> <input type="radio" class="radio " name="quiz1">2</label>
+                <label> <input type="radio" data="true" class="radio true" name="quiz1">1</label>
+                <label> <input type="radio" class="radio" name="quiz1">0</label>
+            </div>
+
+            <div id="answer" class="form-container">
+
+            </div>
+
+
+
+
+        </form>
+
+        <button class="btn">SUBMIT</button>
+    </div>
+
+
+</body>
+
+<script>
+
+
+
+
+
+
+
+
+
+
+    var dem = 1;
+    var result = 0;
+
+
+
+
+
+
+    $(".btn").click(function (e) {
+
+
+
+
+
+        dem++;
+
+        $(`.form-container`).removeClass("active")
+        $(`.form-container:nth-child(${dem})`).addClass("active")
+        if ($(`.form-container:nth-child(${dem - 1}) input[data=true]:checked`).hasClass("true")) {
+            result++
+        }
+
+
+
+        // $(`.form-container:nth-child(${dem - 1}) input[data=true]`))
+        if (dem == $(`.form-container`).length) {
+            $("#answer").html(`<h1>ban da tra loi dc dung ${result} cau</h1>`)
+
+            $(this).css({
+                "display": "none",
+
+            })
+
+        }
+
+    })
+    // $(`.form-container:nth-child(${dem}) input`).each(function (event) {
+    //     $(this).click(() => {
+    //         var btn = $(".btn").show()
+    //     })
+
+
+
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

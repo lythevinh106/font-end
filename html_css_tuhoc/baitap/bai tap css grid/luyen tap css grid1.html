@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		#content{
+			width: 960px;
+			margin: 0 auto;
+			display: grid; 
+			/*grid-template-columns:33.3% 33.3% 33.3% ; cach 1*/
+			grid-template-columns:1fr 1fr 1fr ;  /*cach 2*/
+			/* grid-template-rows:200px 300px 400px 200px; cho them 1 cai 200px */
+		   /* grid-template-rows:repeat(3,minmax(200px,auto));chinh 3 hang deu bang toi thieu 200px  va  toi da auto*/
+		     grid-template-rows:repeat(3,200px);
+		     grid-column-gap: 10px;/*cot cach nhau 10px*/
+		      grid-row-gap: 10px;/*hang cach nhau 10px*/
+		}
+		#content div {
+
+			background: blue;
+			padding: 30px;
+
+		
+		}
+		#content div:nth-child(even) {
+
+			background: red;
+			padding: 30px;
+
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<div id="content">
+		
+		<div>1</div>
+		<div>2</div>
+		<div>lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d  lỏem dad dd dd em dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d  lỏem dad dd dd d d d d d d lỏem dad dd dd d d d d d d </div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		
+	</div>
+
+</body>
+</html>

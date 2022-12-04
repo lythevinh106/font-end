@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        margin-left: 700px;
+        font-size: 25px;
+        padding: 20px;
+        outline: none;
+        color: red;
+    }
+
+    ul {
+        list-style: none;
+        position: fixed;
+        transition: 0.5s linear;
+
+    }
+
+
+    .listmenu1 {
+        top: 0;
+        bottom: 0;
+        width: 350px;
+        background-color: yellow;
+        z-index: 3;
+        transform: translateX(-100%);
+
+
+    }
+
+    .listmenu2 {
+        top: 0;
+        bottom: 0;
+        width: 400px;
+        background-color: red;
+        z-index: 2;
+        transform: translateX(-100%);
+
+        transition-delay: 0.3s;
+
+    }
+
+    .listmenu3 {
+        top: 0;
+        bottom: 0;
+        width: 450px;
+        background-color: blue;
+        z-index: 1;
+        transform: translateX(-100%);
+
+        transition-delay: 0.6s;
+    }
+
+    .listmenu1.active,
+    .listmenu2.active,
+    .listmenu3.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <button class="btn">nút</button>
+    <ul class="listmenu1">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul class="listmenu2">
+
+    </ul>
+    <ul class="listmenu3">
+
+    </ul>
+
+
+
+    <script>
+
+        $(".btn").click(function () {
+            $("ul").toggleClass("active");
+
+
+        })
+    </script>
+
+</body>
+
+</html>

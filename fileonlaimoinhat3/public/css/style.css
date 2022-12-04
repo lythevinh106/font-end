@@ -1,0 +1,299 @@
+@import "home.css";
+@import "product.css";
+@import "orther.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.link {
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.header__top {
+  background-color: #00483d;
+  text-align: end;
+}
+.header__top-nav {
+  background-color: #00483d;
+  padding: 6px 0;
+}
+.header__top-nav li {
+  display: inline-block;
+  color: #fff;
+  display: inline;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 13px;
+  text-align: left;
+}
+.header__top-nav li:not(:nth-last-child(1)) {
+  margin-right: 15px;
+}
+.header__top-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.header__top-main-input {
+  border-radius: 15px;
+  box-shadow: #cccccc 0px 4px 6px 0px;
+  color: #333333;
+  font-size: 13px;
+  padding: 5px 10px;
+  display: flex;
+}
+.header__top-main-input input {
+  display: block;
+  width: 100%;
+  align-items: center;
+  margin: auto 0;
+  outline: none;
+  border: none;
+}
+.header__top-main-input ::placeholder {
+  font-size: 13.33px;
+  color: #737373;
+  font-weight: 700;
+}
+.header__top-main-order {
+  background-color: #009981;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: #cccccc 0px 4px 6px 0px;
+  font-size: 12px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  max-width: 126px;
+}
+.header__top-main-order i {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.header__top-main-order a {
+  color: #ffffff;
+  font-size: 12px;
+}
+.header__top-main-cart {
+  display: flex;
+  align-self: center;
+  font-size: 38px;
+  align-items: center;
+}
+.header__top-main-cart i {
+  position: relative;
+}
+.header__top-main-cart .cart-total {
+  background-color: #ff6801;
+  display: block;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 10px;
+  position: relative;
+  transform: translateY(-5px);
+  padding: 8px 10px;
+  text-align: center;
+}
+.header__top-main-cart .cart-total::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: -35%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #ff6801;
+  border-bottom: 10px solid transparent;
+}
+.header__top-main-nav {
+  margin-top: 20px;
+  align-items: center;
+  background-color: #00483d;
+  border-radius: 5px;
+  box-shadow: #cccccc 0px 4px 6px 0px;
+  color: #333333;
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  text-align: center;
+}
+.header__top-main-nav-menu {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.header__top-main-nav-menu li {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.header__top-main-nav-menu li i {
+  color: #ffffff;
+  display: inline;
+  font-size: 26px;
+  margin: 0px auto;
+  text-align: center;
+}
+.header__top-main-nav-menu li p {
+  color: #ffffff;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5px;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.header__top-main-nav-menu li::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  width: 0%;
+  height: 3px;
+  background-color: #ff6801;
+  bottom: -3px;
+  left: 0;
+  z-index: 2;
+  transition: all 0.2s linear;
+}
+.header__top-main-nav-menu li:hover:after {
+  width: 100%;
+}
+.header__top-main-nav-menu li:hover .menu-child {
+  display: flex;
+}
+.header__top-main-nav-menu li .menu-child {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  min-width: 600px;
+  border-radius: 5px;
+  z-index: 3;
+  background-color: white;
+  box-shadow: #cccccc 0px 4px 6px 0px;
+  display: none;
+  align-items: center;
+}
+.header__top-main-nav-menu li .menu-child h3 {
+  display: block;
+  color: hsl(0deg, 0%, 20%);
+  font-size: 20px;
+  font-weight: bold;
+}
+.header__top-main-nav-menu li .menu-child ul {
+  margin-left: 20px;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 700;
+}
+.header__slider {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.header__slider-img {
+  width: 100%;
+}
+.header__slider-img img {
+  border-radius: 10px;
+  width: 1000%;
+  object-fit: cover;
+}
+.header__end {
+  padding: 0;
+}
+.header__end-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  margin-top: 20px;
+  background-color: rgb(0, 72, 61);
+  border-radius: 11px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  padding: 10px 20px;
+}
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__main-info h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0px 6px;
+}
+.footer__main-info li {
+  color: #ffffff;
+  display: list-item;
+  font-family: -apple-system;
+  font-size: 13px;
+  margin: 0px 0px 3px;
+  text-align: left;
+}
+.footer__main-info h2 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  color: #00483d;
+  display: inline-block;
+  font-family: -apple-system;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 6px 10px;
+}
+.footer__main-product-1 h3 {
+  color: #ffffff;
+  font-family: -apple-system;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0px 6px;
+}
+.footer__main-product-1 ul {
+  display: flex;
+  justify-content: center;
+}
+.footer__main-product-1 ul li {
+  width: 77px;
+  padding: 0 2px;
+}
+.footer__main-product-1 ul li img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.footer__main-product-2 h3 {
+  color: #ffffff;
+  font-family: -apple-system;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0px 6px;
+}
+.footer__main-product-2 ul {
+  display: flex;
+}
+.footer__main-product-2 ul li {
+  padding: 0;
+  flex-basis: 49%;
+  display: flex;
+}
+.footer__main-product-2 ul li:nth-child(3) {
+  flex-basis: 100%;
+  margin-top: 20px;
+}
+.footer__end {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

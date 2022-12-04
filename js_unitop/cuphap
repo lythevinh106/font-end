@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    #result {
+        color: red;
+
+    }
+</style>
+
+
+<body>
+    <h1>xua du lieu trong js</h1>
+    <div id="result"></div>
+
+
+</body>
+
+<script>
+    var a, b, total;
+    a = 1;
+    b = 3;
+    total = a + b;
+    //  document.write(total);
+    document.getElementById("result").innerHTML = total;// in ra ben trong the cua id result
+
+    ////var co the su dung truoc r khai bao sau
+
+    a = 20;
+    console.log(a);
+    var a;
+
+    // khi khai bao ma k gan gia tri cho no goi la undifired
+    let g;
+    console.log(g);
+
+    // ++ hoac  -- thi chi ap dung cho so nguyen
+
+
+
+    // phep toan tren chuoi
+
+
+    let chuoi1 = "ly";
+    let chuoi2 = "the vinh";
+
+    let fullname = chuoi1 + chuoi2;
+    let fullname2 = 90 + chuoi1 + 88;// chuyen sang chuoi1 thanhc huoi
+
+    console.log(fullname2);
+</script>
+
+</html>

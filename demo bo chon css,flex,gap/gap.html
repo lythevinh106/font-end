@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .flex-gap {
+        margin: 0 auto;
+        width: 80%;
+        flex-wrap: wrap;
+        background-color: yellow;
+        display: flex;
+        gap: 10px;
+
+
+        /* display: inline-flex; */
+
+        /* gap: 10px; */
+
+
+    }
+
+    .flex-gap>div {
+
+        width: calc(25% - (10px));
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="flex-gap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,546 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+
+	
+}
+html{
+	width:100%;
+}
+:root{
+
+	--color-main:white;
+	--green-color:rgba(0,229, 238,0.9);
+
+
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(0,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),linear-gradient(0,rgba(0,229, 238,0.9),rgba(0,229, 238,0.15)) ,url('thiet-ke-barbershop-9.png');
+    background-size: cover;
+    position: relative;
+
+
+
+
+}
+#header #header__logo{
+	  
+
+	  display: flex;
+	  justify-content: center;
+	 
+
+
+
+
+}
+#header__iconlist{
+	display: none;
+
+
+}
+.img-logo{
+	display: block;
+
+	
+
+}
+#header #header__h1{
+	 font-size: 70px;
+	 color: var(--color-main);
+	 font-family: 'Dela Gothic One', cursive;
+	text-align: center;
+	margin-top:30px; 
+	 font-weight: 100;
+	
+	 
+
+}
+#header #header__text{
+	text-align: center;
+	margin-top:30px; 
+	 font-family: 'Dela Gothic One', cursive;
+	 color: var(--color-main);
+	 font-weight: 100;
+
+
+
+}
+#header #header__btn {
+	text-align: center;
+	margin-top:30px; 
+}
+#header #header__btn #btn{
+	width: 150px;
+	text-decoration: none;
+	display: inline-block;
+    color: var(--color-main);
+    border: 1px solid  var(--color-main);
+    padding :12px 0px;
+    margin: 0 10px;
+    position: relative;
+    z-index: 1;
+    
+}
+#header #header__btn #btn::after{
+     position: absolute;
+     width: 0%;
+     height: 100%;
+     content: "";
+     
+     left: 0;
+     top:0;
+     z-index: -1;
+     background-color: rgba(255,255,255,1);
+
+
+
+
+
+}
+#header #header__btn #btn:hover{
+	color: rgba(0,0,0,.6);
+}
+#header #header__btn #btn:hover:after{
+	animation: animation_btn1 linear 0.5s forwards ;
+
+}
+@keyframes animation_btn1{
+	  0%{
+	  	  width: 0%;
+    
+
+	  }
+	  100%{
+	  	 width: 100%;
+
+
+	  }
+
+}
+#header #header__list{
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color:
+	rgba(0,229, 238,1);
+	width: 200px;
+	height: 100vh;
+	z-index: 1;
+	transform:translateX(100%);
+
+}
+#header #header__list ul{
+   list-style: none;
+   margin-top: 30px;
+   margin-left: 10px;
+
+}
+#header #header__list ul li{
+	color: rgba(255,255,255,0.9);
+	font-size: 20px;
+	margin: 20px 0;
+
+
+       
+
+}
+#header #header__list ul li+li
+{	margin-bottom:  20px 0;}
+
+#header #header__iconlist{
+	position: absolute;
+	right: 35px;
+	top: 50px;
+	color: white;
+	font-size: 20px;
+	z-index: 2;
+	cursor: pointer;
+	
+
+
+}
+#header #header__iconlist i{
+
+	background-color:   rgba(0,229, 238,1);
+	padding: 10px;
+
+}
+#content-features{
+	         
+	         margin: 70px auto;
+
+}
+
+ #content-features__title{
+	text-align: center;
+
+
+
+    
+}
+ #content-features__title p{
+
+	color: rgba(0,229, 238,1);
+	font-size: 18px;
+	position: relative;
+	display: inline-block;
+}
+#content-features__title h2{
+
+	
+	font-size: 35px;
+	margin-top: 15px;
+}
+#content-features__title p:before{
+	position: absolute;
+	content:""
+	;
+		top:-15px;
+		border-top-left-radius:  35px;
+		border-bottom-right-radius:  35px;
+	left: 0;
+	width:40px;
+	height: 30px;
+	background:linear-gradient(0,rgba(255,255, 255,0.9),rgba(0,229, 238,0.6))  ;
+	z-index: -1;
+	transform: rotate(15deg);
+
+
+
+}
+#content-desc{
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:50px 0; 
+
+
+
+}
+#content-desc #content-desc__left{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           padding-right:200px; 
+           
+           
+}
+#content-desc #content-desc__left--container {
+	padding: 22px 0;
+}
+#content-desc #content-desc__left--container #content-desc__left--title {
+	display: flex;
+	margin-top: 10px;
+
+}
+
+#content-desc #content-desc__left--container #content-desc__left--title i{
+	padding: 10px;
+	border:1px solid var(--green-color);
+	
+	margin-right: 10px;
+	border-radius: 5px;
+
+}
+#content-desc #content-desc__left--container #content-desc__left--title p{
+	display: flex;
+	align-items: center;
+}
+#content-desc #content-desc__left h3{
+	color:var(--green-color);
+}
+
+
+#content-desc #content-desc__right{
+	
+	 background-image:linear-gradient(0,rgba(0,229, 238,0.9),rgba(0,229, 238,0.15)), url("thiet-ke-barbershop-9.png");
+	  flex-basis: 40%;
+	  position: relative;
+	  right: 10%;
+	  
+	  height:440px;
+	
+	 
+	 background-size:cover;
+	 border-radius: 15px;
+
+            
+}
+#content-sevices{
+background-color: rgba(0,0,0,0.2);
+padding: 50px  0;
+
+}
+#content-sevices #content-sevices__title{
+
+}
+#content-sevices #content-sevices__desc{
+	
+	margin:0 auto;
+	display: flex;
+	
+
+	flex-wrap: wrap;
+	
+	justify-content: space-between;
+	padding :40px 0;
+
+}
+#content-sevices #content-sevices__desc--img{
+	
+	flex-basis:48%;
+
+	
+	height:300px;
+	margin-bottom: 25px;
+	position: relative;
+	
+	border-radius: 10px;
+	
+
+	
+
+
+
+}
+#content-sevices #content-sevices__desc--img img{
+	width: 100%;
+	height:100%;
+	border-radius: inherit;
+    
+	
+}
+#content-sevices #content-sevices__desc--img #overlay{
+	position: absolute;
+	top:0;
+	left: 0;
+	
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(0,rgba(0,229, 238,0.9),rgba(0,229, 238,0.15));
+	border-radius: inherit;
+	opacity: 0;
+	transition:all .5s;
+
+  }
+  #content-sevices #content-sevices__desc--img:hover #overlay{
+  	opacity: 1;
+  }
+   #content-sevices #content-sevices__desc--img #title hr{
+   	   width: 40%;
+   	   background-color: white;
+   	   height: 4px;
+   	   margin: 0 auto;
+   	   border: 0;
+   	   margin: 10px auto;
+   }
+  #content-sevices #content-sevices__desc--img #title{
+  	text-align: center;
+  	width: 80%;
+  	color: white;
+  	position: absolute;
+  	bottom: 0;
+  	left: 50%;
+  	opacity: 0;
+
+  	transform: translateX(-50%);
+
+  	transition:all 1s;
+  	
+
+
+  	
+  	
+
+
+  }
+   #content-sevices #content-sevices__desc--img:hover #title{
+   	bottom: 40%;
+   	opacity: 1;
+    	
+    }
+
+
+
+
+
+
+
+
+   #content-testimonial{
+
+   	
+   	margin:0 auto;
+   padding: 50PX 0;
+   
+
+   } 
+   #content-testimonial__title{	
+
+   	}
+   
+   	#content-testimonial__desc {
+
+   		width: 100%;
+   		display: flex;
+   		justify-content: space-between;
+   		align-items: flex-start;
+   		margin-top: 40px; 
+
+
+
+   	}
+   	  
+   	#content-testimonial__desc #content-testimonial__desc--0{
+
+   		flex-basis: 28%;
+   		
+   		padding: 10px;
+
+   		box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.1);
+   		margin-bottom:30px; 
+   		transition: all linear 0.1s;
+
+   	} 
+   	#content-testimonial__desc #content-testimonial__desc--0 #testimonial__desc--header{
+   		width: 100%;
+   		display: flex;
+   		justify-content: flex-start;
+   		align-items: center;
+
+
+
+   	}
+   	#content-testimonial__desc #content-testimonial__desc--0 #testimonial__desc--header img{
+   		width: 35px;
+   		height: 35px;
+   		margin-right: : 150px;
+   		
+
+   	}
+   		#content-testimonial__desc #content-testimonial__desc--0 #testimonial__desc--header span {
+   			display: flex;
+   			flex-direction: column;
+   			justify-content: space-between;
+   			height: 35px;
+   			padding:0 20px;
+   			
+
+
+   		}
+   	#content-testimonial__desc #content-testimonial__desc--0 #testimonial__desc--header span p:nth-child(1){
+   		   font-weight: bold; 
+
+   	}
+   	#content-testimonial__desc #content-testimonial__desc--0 #testimonial__desc--header span p:nth-child(2){
+
+   		font-size: 13px;
+   		color: var(--green-color);
+
+   	}
+   	#content-testimonial__desc #content-testimonial__desc--0 #testimonial__desc--header i{
+   		color: var(--green-color);
+   		height: 35px;
+   		display: flex;
+   		align-items: flex-start;
+
+   	}
+   	#content-testimonial__desc #content-testimonial__desc--0 #title 
+    {
+    	font-size: 14px;
+    }
+    
+    	#content-testimonial__desc #content-testimonial__desc--0:hover{
+    		     transform: translate(1px,-2px);
+    	}	
+
+
+   #footer{
+
+   	background-color: rgba(0,0,0,0.2);
+   	padding: 50px 0;
+
+
+
+   } 	
+   #footer__title
+{
+    position: relative;
+    display: block;
+}
+#footer__primary{
+	
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 100px 0; 
+}
+#footer__primary--left h3{
+	margin-bottom:10px; 
+	font-size: 24px;
+}
+#footer__primary--left p{
+line-height: 30px;
+
+}
+#footer__primary--left i{
+	color: var(--green-color);
+	padding-right:10px; 
+	
+}
+#footer__primary--right{
+	text-align: right;
+}
+#footer__primary--right h3{
+	margin-bottom:10px; 
+	font-size: 24px;
+}
+#footer__primary--right p{
+line-height: 30px;
+
+}
+
+#footer__primary--right i{
+
+	color: var(--green-color);
+	padding-left:10px; 
+}
+#footer__end {
+	width: 100%;
+	text-align: center;
+
+}
+#footer__end i{
+	padding: 9px;
+	border: 0.6px solid var(--green-color);
+	color:var(--green-color);
+	font-size: 19px;
+	margin: 0 7px;
+	cursor: pointer;
+	
+}
+#footer__img{
+	width: 150px;
+	height: 200px;
+	position: absolute;
+	z-index: 0;
+	z-index: -1;
+	left: 50%;
+	top:-12px;
+	transform: translateX(-50%);
+    opacity: 0.2;
+
+}
+
+
+
+
+

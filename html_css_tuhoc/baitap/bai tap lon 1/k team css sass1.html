@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 body{
+		 	font-family: "Lato",sans-serif;
+		 	font-weight: 400;
+		 	font-size: 16px;
+		 	line-height: 1.7;
+		 	color:#777777;
+		 }
+		 *{
+		 	margin: 0;
+		 	padding: 0;
+		 	box-sizing: border-box;
+		 }
+		 header{
+		 	 
+		 	background-image: linear-gradient(to right bottom,rgba(142,158,252,.5),rgba(28,62,255,.5)),
+		 	 url('3024677.jpg');
+		    
+		 	background-size: cover;
+		 	background-position: center; 
+		 	position: relative;
+		 	height: 95vh;
+		  clip-path: ellipse(65% 58% at 52% 32%);
+		 }
+		  header #thediv2{
+		 	position:absolute;
+		 	top: 50%;
+		 	left: 50%;
+		 	transform: translate(-50%,-50%);
+		 	text-align: center;
+		 
+
+		 }
+		 header #logo_header{
+		 	height: 70px;
+		 }
+		 header #thediv1{
+		 	position: absolute;
+		 	top: 30px;
+		 	left: 30px;
+		 }
+		 header h3{
+		 	color:white;
+		 	margin-bottom: 60px;
+		 	text-transform: uppercase;
+		 		text-align: center;
+		 }
+		 header #spanheader1{
+		 	display: block;
+		 	font-size: 62px;
+		 	font-weight: 400;
+		 	letter-spacing: 15px;
+		 	animation: chuyendongleft ease-in 5s; 
+		 	animation-iteration-count:2; 
+		 	animation-delay: 5s;
+
+
+
+		 }
+		 header #spanheader2{
+		 	display: block;
+		 	font-size: 20px;
+		 	font-weight: 700;
+		 	letter-spacing: 18px;
+		 	animation: chuyendongright ease-in 5s;
+		 		animation-delay: 5s;
+		 	
+		 }
+		 #thea{
+		 	text-transform: uppercase;
+		 	text-decoration: none;
+		 	padding: 15px 40px;
+		 	display: inline-block;
+		 	border-radius: 100px;
+		 	font-size: 16px;
+		 	color:#777777;
+		 	background-color: white;
+		 	position: relative;
+		 	animation:chuyendonglen ease-out 3s;
+
+		 }
+		 #thea:hover{
+		 	transform: translateY(-3px);
+		 	box-shadow: 0 5px 20px rgba(139,69, 19,.5);
+
+		 }
+         #thea:active{
+         	transform: translateY(-3px);
+         	outline: none;
+		 	box-shadow: 0 50px 30px rgba(139,69, 19,.5);
+
+         }
+
+        #thea::after{
+        	content: "";
+        	display: inline-block;
+        	height: 100%;
+        	width: 100%;
+        	position: absolute;
+        	border-radius: 100px;
+		 	
+		 	color:#777777;
+		 	background-color: white;
+		 	z-index:-1;
+		 	top:0;
+		 	left: 0;
+		 	transition: all 2s;
+
+
+        }
+        #thea:hover::after{
+        	transform: scale(1.4,1.6);
+        	opacity: 0;
+        }
+        @keyframes chuyendongleft{
+        	0%{
+        		opacity: 0;
+        		transform: translateX(-200px);
+        	}
+        	50%{
+        		transform: translateX(300px);
+        	}
+        	100%{
+        		opacity: 1;
+        		transform: translateX(0);
+        	}
+
+
+        }
+        @keyframes chuyendongright{
+        	0%{
+        		opacity: 0;
+        		transform: translateX(200px);
+        	}
+        	50%{
+        		transform: translateX(-300px);
+        	}
+        	100%{
+        		opacity: 1;
+        		transform: translateX(0);
+        	}}
+        	
+        	  @keyframes chuyendonglen{
+        	0%{
+        		opacity: .3;
+        		transform: translateY(100px);
+        	}
+        	
+        	}
+        	100%{
+        		opacity: 1;
+        		transform: translateY(0);
+        	}}
+
+
+
+        
+              <!--phan duoi-->
+              
+
+		
+	</style>
+</head>
+<body>
+  <header>
+  	  <div id="thediv1">
+  	     <img src="dsjdhsd.jpg" id="logo_header">
+  	  </div>
+      <div id="thediv2">
+  	   <h3>
+  	    <span id="spanheader1">SEllTaught</span>
+  	    <span id="spanheader2">Is house your survice</span>
+  	   </h3>
+  	   <a href="#" id="thea">See you off course</a>
+     </div>
+  </header>
+  <div>
+  	 <h2 id="heading_second">
+  	 	Story about us
+  	 </h2>
+  </div>
+  <div id="hang">
+  	  <div id="cot1_of2">
+  	  	 <h3>
+  	  	 	Fromzero to zero
+  	  	 </h3>
+  	  	 <p id="p1">
+  	  	 	Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 	Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 	Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 	Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 	Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 	Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 	Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 </p>
+  	  	 <h3>
+  	  	 	master your skill
+  	  	 </h3>
+  	  	 <p id="p2">
+  	  	 	 Lorem ípum dolorr sit amet
+  	  	 	cónectertur adipissicing elit
+  	  	 	
+  	  	 </p>
+  	  	 <a href="thea1">Lear more &arr;</a>
+
+  	  	
+  	  </div>
+  	    <div cot1_of2>
+  	    	<div id="thediv2">
+  	    		<img id="anh1" src="na-tra HÌNH SÓI.jpg">
+  	    		<img id="anh2" src="na-tra HÌNH SÓI.jpg">
+  	    		<img id="anh3"src="na-tra HÌNH SÓI.jpg">
+  	    		
+  	    	</div>
+
+  	    </div>	
+
+  	
+  </div>
+</body>
+</html>

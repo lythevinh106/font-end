@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!--thu vien gsap-->
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .content {
+
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .khoi1 {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+
+    button {
+        font-size: 16px;
+        color: white;
+    }
+
+    .btn-1 {
+        background-color: red;
+    }
+
+    .btn-2 {
+        background-color: blue;
+    }
+
+    .btn-3 {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button id="play" class="btn-1">chay</button>
+        <button id="stop" class="btn-2">dung lai</button>
+        <button id="back" class="btn-3">quay lai</button>
+
+
+        <div class="content">
+            <div class="khoi1"></div>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+
+    timeline = new TimelineMax();// khoi tao
+    timeline.to($(".khoi1"), 1, { x: 300 })
+        .to($(".khoi1"), 1, { y: 300 })
+        .to($(".khoi1"), 1, { x: -300 }, "+=1") // sau 1 s thang nay se tu chay,neu k co thi thoi
+
+    $("#stop").click(function () {
+        timeline.stop()
+    })
+
+    $("#play").click(function () {
+        timeline.play()
+    })
+
+    $("#back").click(function () {
+        timeline.reverse();// reverse la di nguoc lai
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+
+    <!--chen thu vien  isotop-->
+
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul.menu {
+        width: 800px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    ul.menu li {
+        list-style: none;
+        padding: 10px 12px;
+        font-size: 20px;
+        color: #212121;
+        background-color: #ffffff;
+        box-shadow: 2px 5px 5px rgb(0, 0, 0, 0.2);
+
+    }
+
+    .content {
+        width: 1200px;
+        margin: auto;
+    }
+
+    img {
+        width: 22%;
+        margin: 10px;
+    }
+
+    h1 {
+        text-align: center;
+
+    }
+
+    .hidden {
+
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+
+    }
+</style>
+
+<body>
+
+
+    <ul class="menu">
+        <li type="type1">loai1</li>
+        <li type="type2">loai2</li>
+        <li type="type3">loai3</li>
+        <li type="all">tat ca</li>
+    </ul>
+
+    <h1 class="title">Tat ca</h1>
+
+    <div class="content">
+        <img class="type1 all" src="cupcake-3.jpeg" alt="">
+        <img class="type2 all" src="doughnut-1.jpeg" alt="">
+        <img class="type3 all" src="doughnut-2.jpeg" alt="">
+        <img class="type3 all" src="DSK.jpg" alt="">
+        <img class="type1 all" src="sweets-2.jpeg" alt="">
+        <img class="type2 all" src="sweets-3.jpeg" alt="">
+    </div>
+
+</body>
+
+<script>
+
+    $(".content").isotope({// chon the thuc hien
+        itemSelector: "img"
+    })
+
+
+    $("ul li").click(function () {
+        var type = $(this).attr("type")
+
+        var tenloai = $(this).text();
+        $("h3").text(tenloai);
+        type = `.${type}`
+        $(".content").isotope({// chon the thuc hien
+            filter: type,
+        })
+
+
+
+    })
+
+</script>
+
+</html>

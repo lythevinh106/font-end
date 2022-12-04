@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown {
+
+        position: relative;
+
+        width: 300px;
+
+    }
+
+    .btn {
+
+
+
+
+        border: 0;
+        padding: 8px 15px;
+
+        box-shadow: 1px 1px 2px black;
+        width: 100%;
+
+
+    }
+
+    .list-ul {
+
+        position: absolute;
+
+        width: 100%;
+        z-index: 2;
+        left: 100%;
+        top: 0;
+        display: none;
+        list-style: none;
+        box-shadow: 1px 2px 1px black;
+        transition: all 2s linear;
+
+    }
+
+
+    .dropdown.open .list-ul {
+        display: block;
+    }
+</style>
+
+<body>
+
+    <div class="dropdown">
+        <button class="btn">Dropdown</button>
+        <ul class="list-ul">
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+        </ul>
+
+
+
+    </div>
+
+
+
+    <div class="dropdown">
+        <button class="btn">Dropdown</button>
+        <ul class="list-ul">
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+        </ul>
+
+
+
+    </div>
+
+
+
+    <div class="dropdown">
+        <button class="btn">Dropdown</button>
+        <ul class="list-ul">
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+            <li>dropdownlv1</li>
+        </ul>
+
+
+
+    </div>
+
+
+    <form action="">
+
+        <select name="year" id="">
+
+
+        </select>
+
+
+        <select name="year" id="">
+
+
+
+        </select>
+    </form>
+
+</body>
+<script src="drop down.js"></script>
+
+</html>

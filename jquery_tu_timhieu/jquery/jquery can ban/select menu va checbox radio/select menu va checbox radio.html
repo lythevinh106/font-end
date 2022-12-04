@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="thu vien UI/jquery-ui.js"></script>
+
+</head>
+<style>
+    .ul-menu-item-wrapper {
+        height: 50px;
+        padding-left: 70px;
+    }
+
+    .avatarClass.ui-icon {
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+</style>
+
+<body>
+
+    <select id="mySelect">
+
+        <option value="" dataClass="avatarClass" dataStyle="background-image:url(anh-banner.jpg)">nguyen van a</option>
+        <option value="" dataClass="avatarClass" dataStyle="background-image:url(anh-banner.jpg)">nguyen van b</option>
+        <option value="" dataClass="avatarClass" dataStyle="background-image:url(anh-banner.jpg)">nguyen van c</option>
+    </select>
+
+
+
+    <br>
+
+    <fieldset>
+        <legend>
+            Vd ve radio
+        </legend>
+
+        <label for=""><input type="radio" name="city" class="Mycheckboxradio">ha noi</label>
+        <label for=""><input type="radio" name="city" class="Mycheckboxradio">hcm</label>
+        <label for=""><input type="radio" name="city" class="Mycheckboxradio">da nang</label>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Vd ve checkbox
+        </legend>
+
+        <label for=""><input type="checkbox" class="Mycheckboxradio2">ha noi</label>2
+
+        <label for=""><input type="checkbox" class="Mycheckboxradio2">hcm</label>
+        <label for=""><input type="checkbox" class="Mycheckboxradio2">da nang</label>
+    </fieldset>
+
+
+
+
+
+
+</body>
+
+<script>
+
+    //selectmenu
+
+    $.widget("custom.iconselectmenu", $.ui.selectmenu, {
+        _renderItem: function (ul, item) {
+            // moi item laf 1  the <li>
+            var li = $("<li>")
+
+                , wrapper = $("<div>", { text: item.label });
+            //them class danh vao disable vao the li neu co
+            if (item.disabled) { li.addClass("ui-state-disabled"); }
+            // trong the <div> se co TExt va the <span> lam avavtar
+            $("<span>", {
+                style: item.element.attr("data-style"),
+                "class": "ui-icon " + item.element.attr("data-class")
+            }).appendTo(wrapper);
+            // tra ve 1 item sau khi render
+            return li.append(wrapper).appendTo(ul);
+        }
+    });
+
+
+    $("#mySelect").iconselectmenu();
+
+
+    //2 checkbox and radio
+
+
+    $(".Mycheckboxradio").checkboxradio({
+        // icon: false,//tat nu bam
+
+    })
+    $(".Mycheckboxradio2").checkboxradio({
+        // icon: false,//tat nu bam
+
+    })
+
+
+</script>
+
+</html>

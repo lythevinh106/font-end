@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <a href="javascript:loadImage()">load hinh anh</a>
+    <br />
+    <div id="msg">Gia tri ban dau</div>
+
+</body>
+<script>
+    /* $.ajax({
+         url: "",
+         type: "get",
+         data: {
+             name1: value1, name2: value2
+         }
+     })
+         .fail(function (response) {// khi co loi
+             alert(`da co loi xay ra + response`)
+         })
+ 
+         .done(function (reponse) {// xu li thanh cong
+             $("#msg").html(response)
+         })
+         .always(function (response) {
+             alert("da xong")
+         })*/
+
+
+
+    function loadImage() {
+
+        $.ajax("http://127.0.0.1:5500/jquery%20can%20ban/ajax%20trong%20jquery/ly%20the%20vinh.html")
+            .done(function (rs) {
+                $('msg').html(rs)
+            })
+    }
+
+
+
+</script>
+
+</html>

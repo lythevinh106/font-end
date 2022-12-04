@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="thu vien UI/jquery-ui.js"></script>
+
+</head>
+
+<style>
+    a[href="#tab-1"] {
+        width: 400px;
+    }
+</style>
+
+<body>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab-1">tab1</a></li>
+            <li><a href="#tab-2">tab2</a></li>
+            <li><a href="#tab-3">tab3</a></li>
+        </ul>
+        <div id="tab-1">
+            <p>noi dung tab1</p>
+        </div>
+        <div id="tab-2">
+            <p>noi dung tab2</p>
+        </div>
+        <div id="tab-3">
+            <p>noi dung tab3</p>
+        </div>
+
+    </div>
+
+
+
+
+    <br>
+    spiner:<input type="text" id="mySpinner" value="0" style="width: 250px;">
+
+    <br>
+    gia tri hien tai:<label id="spinerValue">0</label>
+
+
+
+
+    <br>
+
+    <div id="mySlider" style="width: 250px;"></div> <label id="labelValue1"></label>
+    <br>
+    <br>
+
+    <div id="mySlider2" style="height: 150px;"></div><label id="labelValue2"></label>
+
+</body>
+
+<script>
+
+    //tabs
+
+    $('#tabs').tabs({
+        // collapsible: true,// cho phep cung luc mo het cac tab hay khong nhung pahi tat thuoc tinh event
+        event: "mouseover",
+
+    })
+
+
+    ///spinner
+    $('#mySpinner').spinner({
+        min: 0,
+        max: 10,
+        step: 0.5,// moi 1 lan thay doi2 gia tri
+        // numberFormat: "C",// c la tien te, n la so nguyen
+        // culture: 'vi-VN',// ma vung tien te
+
+        stop: function () {//
+            var value = $(this).spinner("value");
+            $("#spinerValue").html(value)
+        }
+
+        /*change: function () {//khi click ra choo khac thi ms hien thi
+            var value = $(this).spinner("value");
+            $("#spinerValue").html(value)
+        }*/
+
+
+    })
+
+
+
+    // slider
+
+
+    //slider
+
+    $('#mySlider').slider({
+        min: 0,
+        max: 100,
+        step: 1,
+        slide: function () {
+            var vl = $(this).slider("value");
+            $("#labelValue1").html(vl)
+        }
+    })
+
+    $('#mySlider2').slider({
+        orientation: "vertical",
+        min: 0,
+        max: 100,
+        step: 1,
+        stop: function () {
+            var vl = $(this).slider("value");
+            $("#labelValue2").html(vl)
+
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,671 @@
+html{
+	font-size:10px;}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}	
+:root{
+   --blur-black-text:rgba(0,0,0,0.2);
+   --font-size-header:2rem; 
+   --margin-bottom-primary: 70px;
+   --white-text:rgba(255,255,255,0.9);
+   --margin-bottom-desc:50px;
+   --font-size-desc-content:1.4rem;
+}
+.header-container{
+	width: 100%;
+	background-color: #e0ddd2;
+	position: relative;
+
+}
+
+.header{
+	padding:20px 0;
+	margin-bottom: var(--margin-bottom-primary);
+	width: 90%;
+	margin
+	:0 auto;
+	position: relative;
+}
+.header__nav{
+	
+
+} 
+.header__nav ul{
+list-style: none;
+display: flex;
+
+
+}
+.header__nav ul li:nth-child(n+1){
+	margin-right: 20px;
+	color: var(--blur-black-text);
+	font-size:var(--font-size-header);
+
+
+
+
+}
+
+
+.header__logo{
+	text-align: center;
+	font-size:calc(var(--font-size-header) + 0.3rem);
+	font-weight: 600;
+	color: black;
+	
+	
+}
+
+
+
+.header__logo p::after{
+	content: "SHION";
+	font-weight: 600;
+	color: white;
+	
+	background-color: black;
+
+}
+.header__search{
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header__search >*{
+    margin-left: 20px;
+}
+.header__search i{
+	font-size: 1.6rem;
+	display: block;
+}
+.header__search--input{
+	display: flex;
+	border: 1px solid black;
+	
+
+}
+.header__search--input input{
+	padding: 5px 5px;
+	flex:1;
+	border: none;
+
+
+
+}
+.header__search--input button{
+	border: none;
+	background-color: white;
+
+
+
+}
+
+.banner{
+	margin-bottom: var(--margin-bottom-primary);
+	
+	
+
+}
+.banner__img{
+
+
+	background-image: url("pexels-tomaz-barcellos-1987301.jpg");
+	height: 80vh;
+	background-size: 100% 100%;
+	position: relative;
+
+}
+.banner--titile-primary{
+   
+   font-size: calc(var(--font-size-header) * 2);
+   color: var(--white-text);
+   text-align: right;
+  
+  
+   display: flex;
+   justify-content: flex-start;
+   background-color: rgba(0,0,0,0.7);
+   padding:1px 3px;
+   
+
+
+
+
+}
+.banner__img--title-container{
+	position: absolute;
+   top:20%;
+   right:-30%;
+}
+.banner__img--title-1{
+	      margin-bottom: 10px;
+ 
+
+}
+
+
+
+
+
+
+.fashion-trend{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom:calc(var(--margin-bottom-desc) * 1.5);
+}
+.fashion-trend__box-title{
+	
+}
+
+.title-box-primary{
+	box-shadow: 1px 1px 3px 0.5px grey;
+    width: 60%;
+	text-align: center;
+	padding: 40px 100px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	background-color: white;
+	
+	
+	
+
+}
+.title-box-primary::before{
+	content: "";
+	position: absolute;
+	
+	top:-10px;
+	left: -10px;
+	width: 30%;
+	height: 70%;
+	background-color: red;
+	z-index: -1;
+	
+}
+.title-box-primary::after{
+	content: "";
+	position: absolute;
+	
+	bottom:-10px;
+	right: -10px;
+	width: 30%;
+	height: 70%;
+	background-color: red;
+	z-index: -1;
+	
+}
+.title-box-primary{
+   font-size: calc(var(--font-size-header) * 1.9 );
+   
+   
+
+}
+.desc-content-primary{
+	font-size: var(--font-size-desc-content);
+	color: black;
+
+}
+
+
+
+
+.fashion-trend__desc--content{
+	margin-top:var(--margin-bottom-desc);
+	text-align: center;
+	margin-bottom:var(--margin-bottom-desc);
+}
+
+
+
+
+.fashion-trend__img{
+	display: flex;
+   justify-content: space-between;
+
+} 
+.fashion-img-primary {
+	
+width: 32%;
+	
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 0;
+	position: relative;
+
+
+
+
+
+}
+.fashion-img-primary-after{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	left: 50%;
+	transform: translateX(-50%);
+
+	top:0;
+	
+	
+    background:linear-gradient(0,rgba(0,0,0,0.8),rgba(0,0,0,0.9));
+    
+    opacity: 0;
+    transition: all 0.5s linear;
+
+}
+
+
+.fashion-buy-btn{
+	padding:15px 25px;
+	background-color: rgba(255,255,255,0.9);
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	
+	opacity: 0;
+	
+	box-shadow: 0px 0px 2px 1px black;
+	transition: all 0.5s linear;
+
+
+	
+
+
+}
+.fashion-img-primary:hover .fashion-buy-btn{
+	bottom: 50%;
+	transform: translateY(-50%);
+	transform: translateX(-50%);
+
+	opacity: 1;
+	
+
+}
+.fashion-img-primary:hover .fashion-img-primary-after{
+	opacity: 1;
+	top:50%;
+	transform: translate(-50%,-50%);
+
+}
+
+
+.fashion-img-cricle-primary{
+	width: 18%;
+	
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 0;
+}
+.fashion-trend__img-1{
+	background-image: url("pexels-abhishek-saini-3182676.jpg");
+    height: 350px;
+}
+.fashion-trend__img-2{
+	background-image: url("pexels-rahul-shah-1042140.jpg");
+    height: 350px;
+}
+.fashion-trend__img-3{
+
+	background-image: url("pexels-sachin-bharti-1681823.jpg");
+	height: 350px;
+}
+
+
+
+
+
+.funshion-exlusive{
+	background-image: url("pexels-michelle-still-creates-4630901 (1).jpg");
+	height: 300px;
+	background-size: cover;
+	margin-bottom:calc(var(--margin-bottom-desc) * 3);
+	position: relative;
+
+}
+.funshion-exlusive__img{
+	background-image: url("pexels-maksim-goncharenok-4380970.jpg");
+	width: 200px;
+	height: 270px;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 35%;
+    left: 10%;
+	
+	z-index: 2;
+
+}
+
+
+
+.funshion-exlusive__desc{
+	width:25%;
+	
+	background-color: rgba(255,255,255,0.5);
+	padding: 30px 20px;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	left: 50%;
+
+}
+
+
+
+.funshion-exlusive__desc--title{
+	font-weight: 100;
+	margin-bottom: 5px;
+
+
+}
+.funshion-exlusive__desc--content{
+		margin-bottom: 10px;
+		font-size: 1.2rem;
+	
+
+}
+
+.funshion-exlusive__desc--btn{
+	text-decoration: none;
+	color: var(--white-text);
+	padding: 5px 5px ;
+	background-color: black;
+		font-family: 'Pacifico', cursive;
+	
+	
+	
+
+
+
+}
+
+.latest-fashion{
+	width: 80%;
+	margin:0 auto;
+}
+.latest-fashion__box-1{
+	margin-bottom: calc(var(--margin-bottom-desc) * 2);
+}
+.latest-fashion__img{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: calc(var(--margin-bottom-desc) * 2);
+
+}
+
+
+
+.latest-fashion__img-1{
+
+background-image: url("pexels-cottonbro-4881679.jpg");
+height: 300px;
+width: 29%;
+
+}
+.latest-fashion__img-2{
+
+background-image: url("pexels-rahul-shah-1042140.jpg");
+height: 300px;
+width: 29%;
+}
+.latest-fashion__img-3{
+
+background-image: url("pexels-tomaz-barcellos-1987301.jpg");
+height: 300px;
+width: 29%;
+}
+
+.latest-fashion__box-2{
+
+	margin-bottom: calc(var(--margin-bottom-desc) * 2);
+}
+
+
+
+
+
+
+.latest-fashion__cricle{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+
+}
+.latest-fashion__cricle-1{   
+	  
+	  background-image: url("pexels-tomaz-barcellos-1987301.jpg");
+	  border-radius: 100%;
+	 height: 187px;
+	  box-shadow: 0px 0px 5px 2px grey;
+	  background-size: 100% 100%;
+
+}
+.latest-fashion__cricle-2{   
+	 
+	   background-image: url("pexels-tomaz-barcellos-1987301.jpg");
+	   border-radius: 100%;
+	   height: 187px;
+	    box-shadow: 0px 0px 5px 2px grey;
+	   background-size: 100% 100%;
+	  
+}
+.latest-fashion__cricle-3{  
+
+	  
+	   background-image: url("pexels-tomaz-barcellos-1987301.jpg");
+	   border-radius: 100%;
+	     height: 187px;
+	      box-shadow: 0px 0px 5px 2px grey;
+	   background-size: 100% 100%;
+}
+.latest-fashion__cricle-4{   
+	 
+	   background-image: url("pexels-tomaz-barcellos-1987301.jpg");
+	   border-radius: 100%;
+	    height: 187px;
+	     box-shadow: 0px 0px 5px 2px grey;
+	   background-size: 100% 100%;
+	  
+}
+
+.footer-container{
+	   width: 100%;
+		background-color: grey;
+		padding-top:1rem;
+		margin:calc(var(--margin-bottom-primary) * 2) auto 0 auto ;
+		padding-top: 40px;
+		
+		
+}		
+
+.footer{
+	
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	 
+
+
+
+}
+
+
+.footer-title-primary{
+	font-weight: 100;
+	position: relative;
+
+	
+
+
+
+}
+.footer-title-primary::after{
+	content: "";
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-bottom:2px  solid blue;
+}
+.footer__left{
+		width: 26%
+
+}
+.footer__left--desc-content{
+		display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 30px 0;
+
+
+}
+.footer__center{
+	width: 32%
+}
+.footer__right{
+		width: 26%
+}
+.footer__left--img-1{
+	background-image: url("full-color-800x450.jpg");
+	width: 30%;
+	height: 45px;
+	margin-bottom: 5.5%;
+
+	background-size: 100% 100%;
+
+
+}
+
+
+
+
+.footer__right--desc-content{
+		display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 30px 0;
+
+}
+.footer__center--desc-content{
+		display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 30px 0;
+
+}
+
+.footer__center--img-1{
+
+}
+
+
+
+.footer__center--desc-content{
+			display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 30px 0;
+
+}
+.footer__center--img-1{
+	background-image: url("pexels-tomaz-barcellos-1987301.jpg");
+	width: 23%;
+	height: 80px;
+	margin-bottom: 3%;
+
+	background-size: 100% 100%;
+
+
+}
+
+
+
+
+
+
+.footer__right--desc-content{
+		
+
+	padding: 30px 0;
+}
+.footer__right--img-1{
+		background-image: url("app-store-and-google-play-logo-1.jpg");
+	width: 80%;
+	height: 160px;
+	
+
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+}
+.footer-end{
+	width: 80%;
+	margin:0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	
+}
+.footer-end--line{
+	width: 100%;
+	height: 0.2px;
+	background-color: black;
+	border: 0;
+}
+.footer-end--desc{
+	width: 40%;
+	font-size: 1.6rem;
+	color:var(--blur-black-text);
+	padding: 10px 0;
+}
+.footer-end--social{
+	width: 20%;
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 1.6rem;
+	padding: 10px 0;
+
+}
+
+
+
+
+.icon-moblie{
+	  position:absolute;
+	  top:0;
+	  left: 0;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  
+	  z-index: 3;
+
+
+
+}
+.icon-moblie i{
+	font-size: 2.0rem;
+
+}
+  .icon-moblie{
+   	display: none;
+   }
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<style>
+    .container {
+        width: 1000px;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cacslide {
+
+
+        height: 100%;
+        display: flex;
+
+        margin: 0;
+        transition: all 1s linear;
+
+
+
+
+
+    }
+
+    .slide {
+        width: 1000px;
+    }
+
+
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*.slide.active {
+        opacity: 1;
+        visibility: visible;
+    }*/
+
+    #btn-next {
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-weight: bold;
+    }
+
+    #btn-prv {
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        font-weight: bold;
+    }
+
+    ul {
+        font-size: 30px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        list-style: none;
+        width: 300px;
+        justify-content: space-between;
+
+
+    }
+
+    .bubble {
+        cursor: pointer;
+        font-weight: bold;
+
+    }
+
+    .bubble.active {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="cacslide">
+            <div class="slide active"><img src="cake-2.jpeg" alt=""></div>
+            <div class="slide"><img src="cake-3.jpeg" alt=""></div>
+            <div class="slide"><img src="cupcake-1.jpeg" alt=""></div>
+            <div class="slide"><img src="MINH.jpg" alt=""></div>
+        </div>
+        <div class="nutslide">
+            <span id="btn-next"> &gt; </span>
+            <span id="btn-prv"> &lt; </span>
+            <ul>
+                <li class="bubble active">*</li>
+                <li class="bubble">*</li>
+                <li class="bubble">*</li>
+                <li class="bubble">*</li>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    ///slide tu chay
+
+
+
+
+
+
+
+
+
+
+
+    /*console.log(slide.length)
+
+  
+    setInterval(nextSlide, 3000)*/
+
+
+
+
+
+
+
+
+
+    var widthOfContainer = $(".container").width()
+    var cacslides = $(".cacslide")
+    var slide = $(".slide")
+    var slideNumber = cacslides.children().length
+    cacslides.css("width", widthOfContainer * slideNumber);
+
+
+
+    var total = 0;
+    var boxcuoi = cacslides.width() - widthOfContainer
+    setInterval(slideImg, 4000)
+
+    var liSelector = $("ul li")
+
+
+    let dem = 1;
+
+    function slideImg() {
+
+
+        total += 1000
+
+
+        dem++
+
+        if (dem > slide.length) {
+            dem = 1;
+
+        }
+
+
+        if (total > boxcuoi) {
+
+            total = 0
+
+        }
+
+
+        $(cacslides).css({
+            "transform": `translateX(-${total}px)`
+        });
+        liSelector.removeClass("active")
+
+        $(`ul li:nth-child(${dem})`).addClass("active")
+
+    }
+
+
+    $("#btn-next").click(slideImg)
+
+
+    $("#btn-prv").click(function () {
+        total -= 1000
+
+        dem--
+
+        if (dem == 0) {
+            dem = slide.length;
+
+        }
+
+
+
+        if (total < 0) {
+            total = boxcuoi
+
+
+        }
+
+        $(cacslides).css({
+            "transform": `translateX(-${total}px)`
+        });
+
+        liSelector.removeClass("active")
+
+        $(`ul li:nth-child(${dem})`).addClass("active")
+        console.log(dem)
+
+    })
+
+
+
+    $("li").each(function (index) {
+        var total2 = 0
+
+        $(this).click(function () {
+            liSelector.removeClass("active")
+            $(this).addClass("active")
+
+            if (index === 0) {
+                total2 = 0
+            }
+
+
+            if (index === 1) {
+                total2 = widthOfContainer;
+            }
+            if (index === 2) {
+                total2 = widthOfContainer * 2;
+            }
+            if (index === 3) {
+                total2 = widthOfContainer * 3;
+            }
+
+            $(cacslides).css({
+                "transform": `translateX(-${total2}px)`
+            });
+
+
+            console.log(index)
+
+        })
+
+
+
+
+    })
+
+
+
+</script>
+
+</html>

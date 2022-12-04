@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+
+    }
+
+
+
+    :root {
+        --color-brg: #f5f5f5;
+        --color-white: white;
+        --color-dark: #252841;
+        --color-red: #dc3545;
+        --color-muted: #ff5773;
+        --color-blue: #4a90e2;
+        --indigo: #6610f2;
+        --spacing-3: 3rem;
+        --spacing-2: 2rem;
+        --spacing-1: 1rem;
+
+
+
+
+
+    }
+
+
+
+    body {
+        font-size: 1.6rem;
+
+
+        background-color: var(--color-brg);
+
+    }
+
+
+    .review {
+        margin: 0 auto;
+        max-width: 900px;
+        margin-top: var(--spacing-3);
+        overflow: hidden;
+
+    }
+
+    .header-content {
+        display: flex;
+        margin-bottom: var(--spacing-3);
+        align-items: center;
+        padding-right: 2rem;
+
+    }
+
+    .nav i {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        font-size: 1.3rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid var(--color-dark);
+        color: var(--color-red);
+        cursor: pointer;
+        transition: transform 0.2s linear;
+    }
+
+    .nav i:hover {
+        transform: translateX(-2px);
+    }
+
+
+    .btnLeft {
+        margin-right: var(--spacing-1);
+
+    }
+
+
+
+
+
+    .review-box {
+        display: flex;
+        overflow: hidden;
+        transition: all 1s linear;
+        background-color: pink;
+
+
+    }
+
+
+
+
+    .box {
+        transition: all 0.3s cubic-bezier(0.445, 0.55, 0.95);
+        border-radius: 5px;
+        text-align: center;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        padding: 10px 0;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        background-color: pink;
+        border: 1px solid;
+
+    }
+
+
+
+    .image {
+        position: relative;
+        width: 7rem;
+        height: 7rem;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: var(--spacing-2);
+
+    }
+
+
+
+    .image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+
+    }
+
+
+    .name {
+        position: relative;
+        color: var(--color-dark);
+        font-size: 1.4rem;
+        font-weight: 700;
+
+    }
+
+
+    .text {
+
+
+        position: relative;
+        color: var(--color-muted);
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-top: auto;
+
+
+    }
+
+    .designation {
+
+
+        color: var(--color-red);
+        margin-bottom: var(--spacing-1);
+        margin-top: var(--spacing-1);
+
+
+    }
+</style>
+
+<body>
+
+
+    <div class="review">
+        <div class="header-content">
+            <div class="title">
+                <h2>Slideshow With Vanilla JavaScript</h2>
+            </div>
+            <div class="nav">
+                <i class="fas btn fa-chevron-left btnLeft">PRV</i><i class="fas btn fa-chevron-right btnRight">NExt</i>
+            </div>
+        </div>
+
+        <div class="review-box">
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1596050843849-db303b16b50e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                        alt="" />
+                </div>
+                <div class="name">Simon</div>
+                <div class="designation">Student</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="image">
+                    <img src="chup-hinh-kien-truc-11.jpg" alt="" />
+                </div>
+                <div class="name">Simon</div>
+                <div class="designation">Student</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1596050843849-db303b16b50e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                        alt="" />
+                </div>
+                <div class="name">Simon</div>
+                <div class="designation">Student</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1596050843849-db303b16b50e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                        alt="" />
+                </div>
+                <div class="name">Simon</div>
+                <div class="designation">Student</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1596050843849-db303b16b50e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                        alt="" />
+                </div>
+                <div class="name">Simon</div>
+                <div class="designation">Student</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1596050843849-db303b16b50e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                        alt="" />
+                </div>
+                <div class="name">Simon</div>
+                <div class="designation">Student</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1596050843849-db303b16b50e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                        alt="" />
+                </div>
+                <div class="name">Simon</div>
+                <div class="designation">Student</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </div>
+            </div>
+            <!-- end box -->
+
+        </div>
+
+    </div>
+
+</body>
+<script src="slide3.js">
+
+
+
+</script>
+
+</html>

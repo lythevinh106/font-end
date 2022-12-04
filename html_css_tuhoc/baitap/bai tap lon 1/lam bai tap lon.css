@@ -1,0 +1,667 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+:root{
+	--mauxanhchinh:	#00BFFF;
+	--chieurongchinh:950px;
+	--maudenbong:rgba(0,0,0.8);
+	--maudenmo:rgba(0,0,0,0.2);
+}
+
+html,body{
+	font-family: sans-serif;
+}
+#headerto{
+	width: 100%;
+	height: 82px;
+
+}
+#headerto #header{
+   width: var(--chieurongchinh);
+   height: 75px;
+   margin:0 auto;
+   display: flex;
+   justify-content:space-between;
+
+}
+#headerto #header #headerphai{
+	display: flex;
+	align-items: center;
+
+}
+#headerto #header ul{
+	list-style: none;
+
+
+	
+
+
+}
+#headerto #header ul li{
+	display: inline-block;
+	margin-left: 50px;
+	
+
+}
+#headerto #header #headertrai{
+	line-height: 75px;
+	color: black;
+   font-weight: bold;
+   font-size: 25px;
+}
+#headerto #header ul li span{
+	display: block;
+	
+
+}
+
+#headerto #header ul li #thediv2{
+	float: left;
+
+}
+#headerto #header ul li #thediv1{
+	float: left;
+	margin-top: 12px;
+	margin-right: 6px;
+
+	}
+#headerto #header ul li #thediv1 i{
+	color: blue;
+
+}	
+
+#headerto #header ul #span1{
+	font-weight: bold;
+	font-size: 16px;
+
+
+}
+#headerto #header ul #span2{
+	font-size: 13px;
+}
+#headerto #header ul #li3 {
+	    transform: translateY(-8px);
+}
+#headerto #header ul #li3 a{
+	padding: 10px 34px;
+	background-color: blue;
+	color: white;
+	border-radius: 20px;
+	cursor: pointer;
+
+}
+#headerto #header ul #li3 a:hover{
+	background-color: rgba(0,0,0,0.5);
+}
+/*phan header 2*/
+#header2to{
+	width: 100%;
+	height: 56px;
+	background-color: #000011;
+
+}
+#header2to #header2{
+	width: 950px;
+	height: 56px;
+	background-color: #000011;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+#header2to #header2 #header2trai ul{
+	list-style: none;
+	line-height: 56px;
+
+}
+#header2to #header2 #header2trai ul li{
+	display: inline-block;
+	 margin-right: 25px;
+	 font-size:14px;
+
+
+}
+#header2to #header2 #header2phai #header2phai_btn{
+	line-height: 56px;
+	
+	
+    
+    
+}
+#header2to #header2 #header2phai #header2phai_btn input{
+	background-color:  #000011;
+	border:none;
+	
+
+	outline: none;
+	color: white;
+}
+#header2to #header2 #header2phai #header2phai_btn button{
+	   background-color:  #000011;
+	   border: none;
+	   padding: 3px;
+	   outline: none;
+
+}
+#banner {
+	width: 100%;
+	height: 500px;
+	background-image: linear-gradient(to right bottom,rgba(0,0,0,.5),rgba(0,0,0,.5)),
+	 url("chup-hinh-kien-truc-11.jpg");
+	 background-size: cover;
+	 background-position:0 -300px;
+		 	
+	
+	
+
+}
+#feature {
+width: 100%;
+margin-top: 25px;}
+#feature #feature_container{
+	width: 950px;
+	height: 880px;
+	margin: 0 auto;
+
+
+}
+#feature #feature_container #thetrai {
+	width: 60%;
+	height: 900px;
+	float: left;
+	float: left;
+	
+	margin-right: 2%;
+		max-height: 80%;
+
+}
+#feature #feature_container #thetrai #theh2dau{
+	 color: rgba(0,0,0,0.7);
+	 margin-bottom: 50px;
+
+
+}
+#feature #feature_container #thetrai #thep1{
+	margin-bottom: 50px;
+	color: rgba(0,0,0,0.3);
+}
+#feature #feature_container #thetrai #thebao1{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+
+}
+#feature #feature_container #thetrai #thebao1 div{
+	text-align: center;
+	width: 48%;
+	padding:10% 5%;
+	background-color: rgba(0,0,255,0.1);
+	margin-bottom: 4%;
+	
+}
+#feature #feature_container #thetrai #thebao2{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+}
+#feature #feature_container #thetrai #thebao2 div{
+	width: 48%;
+	text-align: center;
+	padding:10% 5%;
+		background-color: rgba(0,0,255,0.1);
+
+
+}
+#feature #feature_container #thetrai div i{
+	font-size: 25px;
+	margin-bottom: 25px;
+
+}
+#feature #feature_container #thetrai #thebao1 div{
+	position: relative;
+
+}
+#feature #feature_container #thetrai #thebao1 #thediv1{
+	background-color: var(--mauxanhchinh);
+}
+#feature #feature_container #thetrai #thebao2 div{
+	position: relative;
+
+}
+#feature #feature_container #thetrai #thebao1 div i:after{
+	content: "";
+	border-style: solid;
+	border-width: 0 50px 50px 0;
+	
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	border-color:transparent #fff transparent transparent;
+
+}
+#feature #feature_container #thetrai #thebao2 div i:after{
+	content: "";
+	border-style: solid;
+	border-width: 0 50px 50px 0;
+	
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	border-color:transparent #fff transparent transparent;
+
+}
+
+
+
+#feature #feature_container #thephai{
+	width: 38%;
+	height: 900px;
+	float: left;
+	
+	box-sizing: border-box;
+	padding: 10px;
+	max-height: 713px;
+	box-shadow:  0px 0px 2px 2px rgba(0,0,0,0.2);
+}
+#feature #feature_container #thephai img{
+	width:342px;
+	height:342px;
+}
+#feature #feature_container #thephai h4{
+	margin:15px 0;
+}
+#feature #feature_container #thephai #thep3{
+	margin-bottom: 30px;
+}
+#feature #feature_container #thephai a{
+	color: white;
+	background-color: var(--mauxanhchinh);
+	text-decoration: none;
+	padding: 14px;
+	border-radius: 14px;
+		
+
+
+}
+/* banner*/
+#banner_giua{
+	width: 100%;
+	height: 120px;
+	background-image:linear-gradient(0,rgba(0,0,255,0.7),rgba(0,0,255,0.7)), url('chup-hinh-kien-truc-11.jpg');
+	background-position: bottom;
+
+
+}
+#banner_giua h3{
+	text-align: center;
+	line-height: 120px;
+}
+/*--*/
+#content{
+	text-align: center;
+	margin-top:100px; 
+}
+#content h2{
+	color:rgba(0,0,0,0.8)
+
+
+}
+#content div{
+margin-top:24px; 
+font-size: 11px;
+
+}
+#content p{
+	color:rgba(0,0,0,0.2);
+	margin-bottom: 10px;
+}
+#service{
+	width: 100%;
+	margin-top:70px; 
+	margin-bottom:70px;
+
+}
+#service #thedivto{
+	 width: var(--chieurongchinh);
+	 margin: auto;
+
+
+}
+#service #thedivto #thebao1{
+	width: 100%;
+	display: flex;
+}
+#service #thedivto #thebao1 div{
+	width: 33.3%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 25px;
+
+}
+#service #thedivto #thebao1 div h4{
+	margin:15px 0; 
+}
+#service #thedivto #thebao1 div h5{
+	color:grey;
+	line-height: 20px;
+}
+#service #thedivto #thebao1 div i{
+	color: var(--mauxanhchinh);
+	font-size: 35px;
+	
+
+}
+#service #thedivto #thebao2{
+	display: flex;
+}
+#service #thedivto #thebao2 div{
+	width: 33.3%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 25px;
+}
+#service #thedivto #thebao2 div h4{
+	margin:15px 0; 
+}
+#service #thedivto #thebao2 div h5{
+	color:grey;
+	line-height: 20px;
+}
+#service #thedivto #thebao2 div i{
+	color: var(--mauxanhchinh);
+	font-size: 35px;
+	
+
+}
+#service #thedivto #thebao2 #thediv6 h5{
+	color: white;
+}
+
+#service #thedivto #thebao2 #thediv6 i{
+	color: white;
+}
+#service #thedivto #thebao2 #thediv6{
+	color:white;
+	background-color: var(--mauxanhchinh) ;
+
+}
+/*banner giua 2*/
+
+#banner_giua2{
+	width: 100%;
+	height: 120px;
+	background-image:linear-gradient(0,rgba(0,0,255,0.7),rgba(0,0,255,0.7)), url('chup-hinh-kien-truc-11.jpg');
+	background-position: bottom;
+	
+	
+
+
+}
+#banner_giua2 div{
+	width: var(--chieurongchinh);
+	height: 120px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+
+}
+#banner_giua2 div a{
+	padding: 20px 70px;
+	background-color: white;
+	border-radius: 30px;
+	color: var(--mauxanhchinh);
+
+}
+/* project*/
+#project {
+	text-align: center;
+	margin-top:70px; 
+	margin-bottom: 35px;
+}
+#project h2{
+	color:var(--maudenbong);
+
+}
+#project h5{
+	color: var(--maudenmo);
+	font-size: 10px;
+	margin-top: 25px;
+}
+/*the cuoi*/
+
+#thecuoi{
+	width:100%
+}
+#thecuoi #thebao1 {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	
+}
+#thecuoi #thebao1 #thediv1{
+	  width:25%;
+	  height:207px; 
+	  background-image:url(hinh-anh-chim-cong-dep-long-lay-bong-den-anh-sang-nang-luong-1024x680.jpg);
+	  background-size: cover;
+
+}
+#thecuoi #thebao1 #thediv2{
+	  width:25%;
+	  height:207px; 
+	  background-image:url(bong-den-dep-trang-tri-quan-cafe-233.jpg);
+	  background-size: cover;
+
+}
+#thecuoi #thebao1 #thediv3{
+	  width:25%;
+	  height:207px; 
+	  background-image:url('tải xuống (1).jfif');
+	  background-size: cover;
+
+}
+#thecuoi #thebao1 #thediv4{
+	  width:25%;
+	  height:207px; 
+	  background-image:url(bong-den-dep-trang-tri-quan-cafe-233.jpg);
+	  background-size: cover;
+
+}
+#thecuoi #thebao2 {
+	width: 100%;
+	height: 100px;
+	position: relative;
+	top:107px;
+	display: flex;
+	
+	
+}
+#thecuoi #thebao2 #thediv1{
+	  width:25%;
+	  height:207px; 
+	  background-image:url(hinh-anh-chim-cong-dep-long-lay-bong-den-anh-sang-nang-luong-1024x680.jpg);
+	  background-size: cover;
+
+}
+#thecuoi #thebao2 #thediv2{
+	  width:25%;
+	  height:207px; 
+	  background-image:url(bong-den-dep-trang-tri-quan-cafe-233.jpg);
+	  background-size: cover;
+
+}
+#thecuoi #thebao2 #thediv3{
+	  width:25%;
+	  height:207px; 
+	  background-image:url('tải xuống (1).jfif');
+	  background-size: cover;
+
+}
+#thecuoi #thebao2 #thediv4{
+	  width:25%;
+	  height:207px; 
+	  background-image:url(bong-den-dep-trang-tri-quan-cafe-233.jpg);
+	  background-size: cover;
+
+}
+#thecuoi{
+	margin-bottom: 300px;
+
+}
+#thetextcuoi{
+	text-align: center;
+}
+#thetextcuoi h3{
+
+   color:var(--maudenbong);
+   margin-bottom:30px; 
+
+      
+}
+#thetextcuoi h5{
+	color: var(--maudenmo);
+	font-size: 10px;
+	margin-bottom: 25px;
+	word-spacing: 2px;
+
+}
+#footer1{
+	width: 100%;
+	
+}
+#footer1 #thebao{
+	width:var(--chieurongchinh);
+	
+
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+	
+	
+
+}
+#footer1 #thebao #thediv1{
+	width: 28%;
+	box-shadow: 0px 0px 3px  2px  rgba(0,0,255,0.2);
+	
+
+
+}
+#footer1 #thebao #thediv1 #thenho1{
+	width: 100%;
+	height: 190px;
+	background-image: url(van-phong-ao-cau-giay-1.jpg);
+	background-size: cover;
+	position:relative;
+}
+
+#footer1 #thebao #thediv1 #thenho1 #thenho1_con{
+	width: 2.5rem;
+	height: 5rem;
+	background-color: var(--mauxanhchinh);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#footer1 #thebao #thediv1 #thenho1 #thenho1_con h3{
+	font-weight: 100;
+}
+#footer1 #thebao #thediv1 #thenho1 #thenho1_con h5{
+	font-weight: 100;
+	color:rgba(255,255,255,0.5);
+
+}
+#footer1 #thebao #thediv1 #thenho1 #thenho1_con h4{
+	font-weight: 100;
+	color:rgba(255,255,255,0.5);
+
+
+
+
+}
+}
+#footer1 #thebao #thediv1 #thenho2{
+
+	width: 100%;
+	height: 250px;
+	padding: 15px;
+
+}
+#footer1 #thebao #thediv1 #thenho2 h4{
+
+	color:var(--maudenbong);
+	margin-bottom:24px; 
+	padding: 15px;
+
+}
+#footer1 #thebao #thediv1 #thenho2 p{
+	color:var(--maudenmo);
+	font-size:14px;
+	line-height:18px;
+	padding:0 15px;
+}
+#footer1 #thebao #thediv1 #thenho3{
+	margin-top: 25px;
+	width: 100%;
+}
+#footer1 #thebao #thediv1 #thenho3 #thea1{
+	text-decoration: none;
+	padding: 8px 10px;
+	background-color: var(--mauxanhchinh);
+	border-radius:22px;
+
+}
+#footer1 #thebao #thediv1 #thenho3 {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+#footer1 #thebao #thediv1 #thenho3 #thea2{
+	font-size:14px;
+	text-decoration:none; 
+	padding: 8px 10px;
+
+
+}
+#footer1 #thebao #thediv1 #thenho3 #thea2 i{
+	margin-left:10px; 
+	color:var(--mauxanhchinh);
+}
+#footer2{
+	margin: 100px;
+	width: 100%;
+	height: 200px;
+	background-color: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,0.5);
+	text-align: center;
+
+
+}
+#footer2 p{
+	line-height: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

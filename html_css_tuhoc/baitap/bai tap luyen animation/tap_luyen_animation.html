@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		/* transition  o day:https: //quantrimang.com/transition-trong-css-163530 */
+
+		/* tran forms o day:https://quantrimang.com/2d-transform-trong-css-163500*/
+
+		#the1 {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin: 0 auto;
+			animation: chuyendong1 ease-in 5s 2s forwards;
+			/* 2s la delay truoc khi thuc hienforwards l dung o diem cuoi animation*/
+			margin-bottom: 200px;
+
+
+			animation-delay: 2s;
+			/*5s sau moi bat dau*/
+
+
+		}
+
+		#the2 {
+
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			margin: 0 auto;
+
+
+		}
+
+		#the2:hover {
+
+			transform: translate(4px, 5px);
+			box-shadow: -2px -2px 2px 2px grey;
+
+		}
+
+		#the3 {
+
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			margin: 0 auto;
+			animation: chuyendongright ease-in 6s;
+			margin-top: 50px;
+
+
+		}
+
+		#the4 {
+
+			width: 200px;
+			height: 200px;
+			background-color: grey;
+			margin: 0 auto;
+			animation: chuyendongleft ease-out 6s;
+
+
+		}
+
+		@keyframes chuyendongleft {
+			0% {
+				opacity: 0;
+				transform: translateX(-200px);
+			}
+
+			50% {
+				transform: translateX(300px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		#the5 {
+
+			width: 200px;
+			height: 200px;
+			background-color: black;
+			margin: 0 auto;
+			animation: chuyendonglen ease-out 6s;
+
+
+		}
+
+		#the6 {
+
+			width: 200px;
+			height: 200px;
+			background-color: black;
+
+			margin: 125px auto;
+
+
+
+		}
+
+		#the6:hover {
+			transition: 2s;
+			/*thoi gian chuyen dong cua trn form*/
+			transform: rotate(45deg);
+
+
+
+
+		}
+
+		#the7 {
+
+			width: 100px;
+			height: 100px;
+			background-image: url("../bai tap lon 3/HTML5_sticker.png");
+			margin: 0 auto;
+			background-size: 100% 100%;
+			border-radius: 100%;
+			animation: chuyendongxoay ease-in 5s;
+			animation-iteration-count: infinite;
+			/*so lan lap ai cua chuyen dong :vô tận*/
+
+		}
+
+		@keyframes chuyendongxoay {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+
+			}
+
+
+
+		}
+
+		@keyframes chuyendongnghieng {
+			0% {
+				opacity: 0%;
+
+			}
+
+			100% {
+				opacity: 1;
+				transform: rotate(45deg);
+
+			}
+
+		}
+
+
+		@keyframes chuyendongright {
+			0% {
+				opacity: 0;
+				transform: translateX(200px);
+			}
+
+			50% {
+				transform: translateX(-300px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+
+		@keyframes chuyendonglen {
+			0% {
+				opacity: .3;
+				transform: translateY(100px);
+			}
+
+
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+
+		@keyframes chuyendong1 {
+			0% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.5);
+				background-color: yellow;
+
+			}
+
+			100% {
+				transform: scale(1.9);
+				background-color: blue;
+
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+	<div id="the1">the1</div>
+	<div id="the2">the2</div>
+	<div id="the3">the3</div>
+	<div id="the4"></div>
+	<div id="the5">the5</div>
+	<div id="the6">the6</div>
+	<div id="the7">the7</div>
+
+</body>
+
+</html>

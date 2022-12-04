@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<style>
+    .hight-light {
+        color: red;
+        opacity: 0.4;
+    }
+</style>
+
+<body>
+
+    <img title="tieude1" class="class1"
+        src="https://i.ytimg.com/vi/T3CZa0_ArYY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCC4ORFYLBjNairL3lTwGzEBgD1JQ"
+        alt="">
+
+    <a class="get_img" href="#">lay linh anh</a>
+
+
+
+
+    <p>doan van 1</p>
+    <p>doan van 2</p>
+    <p class="hight-light">doan van 3 hight light</p>
+    <p>doan van 4</p>
+    <p>doan van 5</p>
+
+
+    <form class="form_login" action="" method="post">
+
+
+        <label for="username">Username</label>
+        <input type="text" name="username" value="" id="username">
+
+        <label for="password">password</label>
+        <input type="text" name="password" value="" id="password">
+        <input type="submit" value="dang nhap" name="sm_login" id="form_login">
+        <p class=""></p>
+
+
+    </form>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            // phan atttribute
+
+            $('a.get_img').click(function () {
+
+
+                alert($('img').attr("src"));// lay ra noi dung cua attr src
+
+                alert($('img').attr("title", "tieude sau khi sua"))// lay ra tieu de va gan lai tieu de moi
+                alert($('img').removeAttr("class"))// lxoa class
+            })
+
+
+
+
+
+            /// phuong thuc ve class
+
+
+            $("p").click(function () {
+
+                $("p").addClass("hight-light")// them vao class
+
+                $("p").toggleClass("hight-light")// neu co thi xoa con k thi them vao 
+                $("p").hasClass("hight-light")// kiem tra xem co hay k
+                $("p").removeClass("hight-light")// xoa classs
+            })
+
+
+
+            // nhom phuong thuc lay ra gia tri
+
+            $(".form_login").submit(function (e) {
+                //  e.preventDefault();
+                //username = $("#username").val("noidungsuadoi") 
+
+                var str_result = "";
+                let username = $("#username").val();// lay ra value cua user name
+                let password = $("#password").val();
+
+
+
+                str_result = "<p>" + username + "</p> <p >" + password + "</p >";
+                alert(str_result);
+                alert("2323");
+                return false; // huy load submit
+
+
+            });
+
+
+
+
+
+
+
+            ///nhom phuong thuc tim kiem va loc
+
+            $("p").eq(3).css("color", "pink")//lay the p thu 4
+            $("p").not("hight-light").css("color", "red")//k phair la the hight light
+            $(".hight-light").next().css("color", "blue")// sau hight light 1 the mau xanh
+            $(".hight-light").nextAll().css("color", "yellow")// sau hight light tat ca the  mau xanh
+
+            $("p").click(function () {
+
+                if ($(this).is(".hight-light")) {// neu no la hight light thi thu chien
+
+                    alert("day la hight light");
+                }
+            })
+
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

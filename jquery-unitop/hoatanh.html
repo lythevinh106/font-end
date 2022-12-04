@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    #wrapper {
+        position: relative;
+        width: 100%;
+
+
+    }
+
+    #box {
+        width: 600px;
+        height: 140px;
+        background-color: brown;
+        display: none;
+        position: absolute;
+    }
+
+    #box2 {
+        width: 40%;
+        height: 140px;
+        background-color: brown;
+        top: 400px;
+        left: 200px;
+
+        position: absolute;
+    }
+</style>
+
+<body>
+
+    <div id="wrapper">
+
+
+        <h1>hieu ung show - hide trong jquery</h1>
+
+        <a href="#" id="show">show</a>
+        <a href="#" id="hide">hide</a>
+        <a href="#" id="toggle">toggle</a>
+        <a href="#" id="fadetoggle">fadetoggle</a>
+
+        <div id="box">
+
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio consequuntur ipsa tenetur voluptatem,
+            nostrum in minus? Consequatur numquam, dolorem maiores placeat at ea vero iure, neque magni voluptatum
+            pariatur
+            illo.</p>
+
+
+
+
+        <h1>hieu ung sslide trong jquery</h1>
+
+
+        <a href="#" id="slideup">slideup</a>
+        <a href="#" id="slidedown">slidedown</a>
+        <a href="#" id="slidetoggle">slidetoggle</a>
+
+
+
+        <h1> animate jquery</h1>
+
+
+        <a href="#" id="animate">animate</a>
+
+        <div id="box2">
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    ///show, hide,toggle
+
+    $("#show").click(function () {
+
+        $("#box").show(1000, function () {// tuong tu nhu hide toogle
+
+            alert("chay hieu ung thanh cong")
+        });
+
+
+
+
+    });
+
+
+
+    $("#toggle").click(function () {
+
+        $("#box").toggle(1000, function () {// tuong tu nhu hide toogle
+
+            alert("chay hieu ung thanh cong")
+        });
+
+
+
+
+    });
+
+    // hoat anh .fadeIn(): hien dan phan tu
+    // fadeOut: an dan phan tu
+    //fadeToggle(): gan  tuong tu nhu toogllle
+
+    $("#fadetoggle").click(function () {
+
+        $("#box").fadeToggle(1000, function () {// tuong tu nhu hide toogle
+
+            // alert("chay hieu ung thanh cong")
+        });
+
+
+
+
+    });
+
+
+
+    // hieu ung slide: di chuyen an phan tu theo huong cuon len ,xuong va cong tac nhuw nhung cai tren
+    // stop(): tam dung hieu ung xu li lien tiep: ngan chan hang doi hieu ung
+
+    $("#slidetoggle").click(function () {
+
+        $("#box").stop().slideToggle(1000, function () {// tuong tu nhu hide toogle
+
+            // alert("chay hieu ung thanh cong")
+        });
+
+
+
+
+
+
+    });
+
+
+
+
+    // animate:hoat canh len css: thay doi css theo 1 thoi gian nhat dinh
+    $("#animate").click(function () {
+
+        $("#box2").animate({
+            width: "100px",
+            padding: "50px",
+            left: "800px"
+
+
+
+
+        }, 1000, function () {
+
+        })
+            ;
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		#content{
+			display: grid;
+			
+			/*grid-column-gap: 10px;
+			grid-row-gap:10px;*/
+			grid-gap:10px;
+		
+			grid-auto-rows:minmax(100px,auto);
+
+
+			width: 960px;
+			margin: 0 auto;
+			grid-template-columns: repeat(4,1fr);
+			position: relative;
+			grid-template-areas:
+			"header header header header"
+			"aside main main main"
+			"nav main main main"
+			"section section section section"
+			"section section section section"
+			"footer footer footer footer"
+
+		
+		}
+		header{
+			grid-area: header;/*dat ten cho vung grid*/
+		}
+		main{
+			grid-area:main;}
+		section{
+			grid-area:section;/*dat ten cho vung grid*/
+		}
+		nav{
+			grid-area: nav;
+		}
+		aside{
+			grid-area:aside;
+		}
+        footer{
+			grid-area:footer;
+		}
+
+		#content > * {
+
+
+			background: red;
+			padding: 30px;
+			
+
+		
+		}
+	
+	
+	
+
+
+
+
+	</style>
+</head>
+<body>
+
+
+	<div id="content">
+		<header>Header</header>
+		<main>Main</main>
+		<section>Section</section>
+		<aside>Aside</aside>
+		<nav>Nav</nav>
+		<footer>Footer</footer>
+		
+		
+	</div>
+
+</body>
+</html>

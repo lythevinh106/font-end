@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="./thu vien UI/jquery-ui.js"></script>
+</head>
+
+
+<style>
+    #my-prb-label {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+
+
+    }
+</style>
+
+<body>
+    <a id="my-tooltip" title="ban clik o day thi prohresbar se chay" href="javascript:Progress()">bat dau</a>
+    <div id="my-prb">
+        <p id="my-prb-label">
+            Loading
+        </p>
+    </div>
+
+
+
+
+    <p>ngay sinh cua ban</p>
+    <input type="text" id="birthday" style="width:150px ;" />
+
+
+
+
+</body>
+
+<script>
+
+    /// progressbar
+    $('#my-prb').progressbar({
+        value: false,// chỉ dinh % ban dau  neu de false thi dieu khien tu do
+        change: function () {//su kien kik hoat moi khi value co thay doi
+            let valueOfPro = $('#my-prb').progressbar("value");
+
+            $("#my-prb-label").html(valueOfPro + '%')
+        },
+        complete: function () {// su kien kik hoat khi value =100
+            $("#my-prb-label").html('da xong')
+        },
+    });
+
+
+
+    function Progress() {
+        let valueOfPro = $('#my-prb').progressbar("value") + 5;
+        $('#my-prb').progressbar("value", valueOfPro);
+        if (valueOfPro < 100) {
+            setTimeout("Progress()", 50)
+        }
+
+    }
+
+    ////// datepiker
+
+
+
+    $("#birthday").datepicker({// bat buoc phai trong the input
+        dateFormat: "dd//mm/yy",
+        minDate: "01/05/2018",
+        maxDate: "29/05/2018"
+    });
+
+
+
+    ///tooltip
+    $("$my-tooltip").tooltip({
+        show: { effect: "slideDown", delay: 250 },// hieu ung khi hien
+        hide: { effect: "slideUp", delay: 250 },// hieu ung khi an
+        track: true,//khi di chuyen se  di chuyen theo
+    }
+    );
+
+
+
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="./thu vien UI/jquery-ui.js"></script>
+
+</head>
+
+
+<style>
+    #my-prb-label {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+
+
+    }
+</style>
+
+<body>
+    <button class="btn">bat dau</button>
+    <div id="my-prb">
+        <p id="my-prb-label">
+            Loading
+        </p>
+    </div>
+
+</body>
+
+
+
+<script>
+    $(".btn").click(progresBar)
+
+
+
+
+
+
+    function progresBar() {
+        let valPrb2 = $("#my-prb").progressbar("value") + 5;
+        $('#my-prb').progressbar("value", valPrb2);
+        if (valPrb2 < 100) {
+            setTimeout(progresBar
+                , 50)
+        }
+    }
+
+
+
+    $("#my-prb").progressbar({
+        value: false,
+        change: function () {
+            var valPrb = $("#my-prb").progressbar("value")
+            $("#my-prb-label").text(`${valPrb}%`);
+        }
+        ,
+        complete: function () {
+            $("#my-prb-label").text("da xong");
+        }
+    })
+
+
+
+
+</script>
+
+
+
+</html>

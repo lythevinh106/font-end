@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../thu vien-grid-sytem.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.container{
+			background-color: grey;
+			min-height: 100vh;
+
+		}
+
+		.my-column{
+			text-align: center;
+			min-height: 50vh;
+			background-color: orange;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="grid wide container">
+		<div class="row row_1">
+			<div class="col l-6 l-o-3 m-8 m-o-2 c-12">
+				<div class="my-column">
+					<h1>Column1</h1>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row row_2 no-gutters">   <!-- lam cho mat khoang cach giua cac cot-->
+			<div class="col l-3 l-o-6 m-3 m-o-3"> 
+				<div class="my-column">
+					<h1>Column1</h1>
+				</div>
+			</div>
+			<div class="col l-3 m-3 ">
+				<div class="my-column">
+					<h1>Column1</h1>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+</body>
+</html>

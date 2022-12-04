@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function is_ODD(number) {
+            if (number % 2 == 0)
+                return true
+        }
+
+        if (is_ODD(8)) {
+
+            console.log("day la so le");
+        }
+
+
+
+        //https://viblo.asia/p/cac-loai-vong-lap-trong-javascript-07LKXp82KV4
+        ///for-in : duyet mang va duyet doi tuong qua key
+        //Vòng lặp này có đôi chút khác biệt với các hàm phía trên, For ... in mục đích chủ
+        // yếu được dùng để loop trong một object chứ không phải array . 
+        //Số lượng vòng lặp sẽ tương ứng với số lượng thuộc tính của object
+
+        let person = {
+            fullname: "ly the vinh",
+            age: 32,
+            gender: "male"
+        }
+        for (let key in person) {
+            document.write("key" + ":" + person[key] + "<br>");
+        }
+
+
+
+        let myaArr = ["red", "green", "black"];
+        for (let key in myaArr) {
+            document.write("mycolor" + ":" + myaArr[key] + "<br>");
+
+        }
+
+
+        ///for-of : duyet mang g qua value
+
+
+        let myaArr2 = ["do", "xanh", "vang"];
+
+        for (let value of myaArr2) {
+            document.write("key" + ":" + value + "<br>");
+        }
+
+
+
+        var str = 'paul';
+        for (var value of str) {
+            console.log(value);
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

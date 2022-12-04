@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <h2>click the buuton to load data from severs</h2>
+
+    <div id="stage" style="background-color: yellowgreen">
+        stage
+
+    </div>
+
+    <input type="button" id="driver" value="Load Data">
+</body>
+
+<script>
+
+    $("#driver").click(function () {
+        $.getJSON("dulieu.json", function (rs) {// co 3 tham so do la :tham so 1 laf duong dan, 2 la tham so ma php nhan, 3 laf call back data
+            $("#stage").append(`name: ${rs.name}`)
+            $("#stage").append(`<br>: ${rs.age}`)
+            $("#stage").append(`<br>name: ${rs.sex}`)
+        })
+
+    })
+</script>
+
+</html>

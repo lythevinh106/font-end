@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="thu vien UI/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div id="my-accordion" style="width: 200px;">
+        <h3>Tab thu nhat</h3>
+        <div>noi dung thu nhat</div>
+        <h3>Tab thu hai</h3>
+        <div>noi dung thu nhat</div>
+        <h3>Tab thu ba</h3>
+        <div>noi dung thu nhat</div>
+
+
+
+    </div>
+
+    <input type="text" id="conmplete">
+
+
+
+    <ul id="my-menu" style="width: 300px;">
+        <li>
+            <div>menu A</div>
+            <ul>
+                <li>
+                    <div>a1</div>
+                </li>
+                <li>
+                    <div>a2</div>
+                </li>
+
+            </ul>
+        <li id="ul-none">
+            <div>B</div>
+        </li>
+        <li>
+            <div>menu</div>
+        </li>
+        </li>
+    </ul>
+
+
+</body>
+
+<script>
+
+    //accordion
+    $('#my-accordion').accordion({
+        heightStyle: 'content',
+
+    })
+
+
+    //autoConmplete
+
+    var data = [
+        'thu vien lap trinh',
+        'ly the vinh',
+        'jquery',
+        'lap trinh web'
+    ]
+    // cai dat autocomlate
+
+    $('#conmplete').autocomplete({
+        delay: 100,
+        source: data
+    })
+
+
+    // menu
+
+
+
+    $("#my-menu").menu()
+
+
+</script>
+
+</html>

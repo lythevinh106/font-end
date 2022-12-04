@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" href="../fontawesome-free-5.15.2-web/css/all.min.css"/>
+	<style type="text/css">
+		body{
+			background-color: grey;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		h2{
+			text-align: center;;
+			margin-bottom: 20px;
+			font-weight: bold;
+		}
+		#container{
+			width: 300px;
+			margin:200px auto;
+			background-color: white;
+			padding: 70px 50px;
+			border-radius: 10px;
+
+
+
+		}
+		#header__google{
+			background-color: rgba(0,0,255,0.7);
+               display: flex;
+               padding:5px 0px ;
+               padding-left: 2px; 
+               align-items: center;
+               justify-content: space-between;
+               border-radius: inherit;
+              width: 300px;
+              position: relative;
+
+
+
+
+		}
+		#header__google img{
+			width: 2rem;
+			height: 2rem;
+			border-radius: 10px;
+			margin-left:2px; 
+			
+
+
+		}
+	    #header__google--text{
+	    text-align: center;
+	    color: white;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+	    
+	  
+
+
+	    } 
+	    h3{
+	    	
+	    	text-align: center;
+	    	padding: 20px 0;
+	    	font-size: 14px;
+	    	position: relative;
+	    	color: grey;
+
+
+	    }
+	     h3:after{
+	    	content: "";
+	    	display: inline-block;
+	    	width: 100%;
+	    	height: 1px;
+	    	background-color: grey;
+	    	position: absolute;
+	    	top: 50%;
+	    	left: 0;
+	    	transform: translateY(-50%);
+	    }
+	    h3 span{
+	    	display: inline-block;
+	    	z-index: 2;
+	    	padding:0 15px;
+	    	position: relative;
+	    	background-color: white;
+
+	    	
+
+	    }
+	    #form {
+	    	display: flex;
+	    	flex-direction: column;
+	    	margin-bottom: 20px;
+	    }
+	    #form p{
+	    	color: rgba(0,0,0,0.9);
+	    	margin-bottom: 5px;
+	    	font-size: 12px;
+	    	font-weight: bold;
+	    }
+	    #form input{
+	    		padding: 12px 8px;
+	    		background-color:rgba(0,0,0,0.1);
+	    		border-radius: 10px;
+	    		border:0;
+	    		outline: none;
+	    		
+	    		
+	    		flex: 1;
+	    }
+	     #form #input1
+	     {
+	     	margin-bottom:15px; 
+	     	
+
+	     
+	     }
+	     #footer__btn{
+	     	display: flex;
+	     }
+	     #footer__btn a{
+	     text-decoration: none;
+	     color: white;
+	     background-color: green;
+	     padding:10px 0;
+	    text-align: center;
+	    border-radius: 10px;
+	     
+	     flex:1;
+
+
+	     }
+
+
+
+
+
+		
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h2>Sign up</h2>
+		<div id="header__google">
+			<img src="unnamed.png">
+			<p id="header__google--text">Siger up with google</p>
+
+			
+		</div>
+		
+	     <h3><span id="line__text">Or</span></h3>
+			
+		
+		<div id="form">
+			<p>First name</p>
+			<input id="input1" type="name" name="" placeholder="nhap vao ten cua ban">
+			<p>Email</p>
+			<input type="Email" name="" placeholder="nhap vao Email cua ban">
+		</div>
+		<div id="footer__btn">
+			<a href="">Sign up</a>
+			
+		</div>
+		<h5></h5>
+
+	</div>
+
+
+</body>
+</html>

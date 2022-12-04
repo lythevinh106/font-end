@@ -1,0 +1,164 @@
+@media only screen and (min-width: 740px) and (max-width:1023px) {
+	#header1{
+		height: calc(var(--height-header1) *1.5);
+
+		
+
+	}
+    #header1 ul{
+    	width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+    }
+	#header1 ul li{
+		line-height:calc(var(--line-height-header-li)*1.5);
+		border: none;
+
+
+			}
+
+	#header2{
+		 width:100%;
+    height: 350px;
+	background-image: url("afba04dcd0ba1736a9a16aaf683b63fe.png");
+	background-size: 100% 100%;
+	margin-top: 4px;
+
+	}	
+
+	#content{
+	width: 100%;
+	flex-direction: column-reverse;
+
+
+	display: flex;
+	
+	margin-top:0;
+	padding:20px 0;
+
+
+
+
+
+		}
+		#content #content_phai{
+			width:100%;
+	height: 800px ;
+	display: flex;
+	flex-direction: row;
+	
+	justify-content: space-between;
+	padding-bottom:20px; 
+
+		}
+		#content #content_phai #thebao1 {
+			flex-basis: 48%;
+			height: 100%;
+		}
+		#content #content_phai #thebao2 {
+			
+			flex-basis: 48%;
+			height: 100%;
+			max-width: 
+		}
+		#content #content_trai{
+			width: 100%;
+
+		}
+		#footer{
+			text-align: center;
+		}
+
+}	
+
+
+
+@media only screen and (max-width: 739px){
+	:root{
+		--font-size-header:10px;
+	}
+
+	#header1{
+		height: calc(var(--height-header1) *0.8);
+
+		
+
+	}
+    #header1 ul{
+    	width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+
+    }
+	#header1 ul li{
+		line-height:calc(var(--line-height-header-li)*0.8);
+		border: none;
+
+
+			}
+	#header2{
+		 width:100%;
+    height: 200px;
+	background-image: url("afba04dcd0ba1736a9a16aaf683b63fe.png");
+	background-size: 100% 100%;
+	margin-top: 4px;
+
+	}	
+
+	#content{
+	width: 100%;
+	flex-direction: column-reverse;
+
+
+	display: flex;
+	
+	margin-top:0;
+	padding:20px 0;
+
+
+
+
+
+		}
+		#content #content_phai{
+			width:100%;
+	height: 400px ;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: space-between;
+	padding-bottom:20px; 
+
+		}
+		#content #content_phai #thebao1 {
+			flex-basis: 100%;
+			height: 50%;
+			
+			display: none;		}
+		#content #content_phai #thebao2 {
+			
+			flex-basis: 100%;
+			height: 100%;
+			max-width: 
+		}
+		#content #content_trai{
+			width: 100%;
+
+		}
+		#footer{
+			text-align: center;
+		}
+		.nav__bar-btn i{
+			display: block;
+		}
+
+}	
+
+
+	
+
+
+}

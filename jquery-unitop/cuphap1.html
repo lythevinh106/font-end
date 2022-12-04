@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+
+    <p class="name">du lieu ban dau</p>
+    <button id="btn_red">do</button>
+    <button id="btn_blue">xanh</button>
+
+    <br>
+
+    <button id="noidung">click de thay doi noi dung</button>
+    <br>
+    <a href="home.html" title="trang chu">trang chu</a>'
+    <br>
+    <a href="about.html" title="gioi thieu">gioi thieu</a>
+    <br>
+    <a href="shoe.html" title="giay">giafy</a>
+    <br>
+    <a href="shoe2.html" title="giay">giay 2</a>
+
+    <br>
+
+
+
+    <p>dona van 1</p>
+    <p>dona van 2</p>
+    <p>dona van 3</p>
+    <p>dona van 4</p>
+
+
+
+    <div class="box">
+        <p>dona van 5</p>
+        <p>dona van 6</p>
+        <p class="p2">dona van 7</p>
+    </div>
+
+
+
+
+    <ul class="list-post">
+
+        <li>bai viet 1</li>
+        <li>bai viet 2</li>
+        <li>bai viet 3</li>
+        <li>bai viet 4</li>
+
+    </ul>
+
+
+
+</body>
+<script>
+    $(document).ready(function () {
+
+        $("p.name").text("du lieu sau khi thay doi");
+
+
+
+
+        $("#btn_red").click(function () {
+
+            $("#btn_red,#btn_blue").css({
+                "background-color": "red", "color": "yellow"
+            });
+        })
+
+
+        //// lay slecte
+
+        $("#noidung").click(function () {
+
+            $("a[href='home.html']").css({ "color": "red" });
+            // $("a[href!='home.html']").css({ "color": "yellow" });// to mau cho nhung cai k phai la home
+
+            //$("a[href*='shoe']").css({ "color": "yellow" });// to mau cho nhung cai co chu tu shoe....
+
+        });
+
+
+
+
+        // $("p:eq(1)").css({ "color": "red" });// to mau cho doan van o vtthu1
+
+        $("p:first").css({ "color": "red" });// to mau cho doan van o vi tri dau tien
+        $("p:last").css({ "color": "blue" });// to mau cho doan van o vi tri cuoi cung
+
+        $("p:gt(2)").css({ "color": "yellow" });// to mau cho doan van o vt lon hon 2 
+        $("p:lt(2)").css({ "color": "yellow" });// to mau cho doan van o vt be hon 2 
+
+        $("div.box p:eq(1)").css({ "color": "red" });// lay ra con cua box o vt thu 1
+
+        $("p:even").css({ "color": "green" });// p le mau dao 
+        $("p:odd").css({ "color": "black" });// p chan mau xanh
+        $("p:not('.p2')").css({ "color": "red" });// to mau cho doan van k o vt thu p2
+
+
+
+
+
+
+
+
+        //select loc theo phan tu con
+
+        $("ul.list-post li:first-child").css("color", "blue");// lay ra phan tu con dau tien cua list post
+        $("ul.list-post li:last-child").css("color", "blue");// lay ra phan tu con cuooi cung cua list post
+        $("ul.list-post :nth-child(2)").css("color", "red");// lay ra phan tu con thu 2 cua list post
+        $("ul.list-post :nth-child(even)").css("color", "pink");// lay ra phan tu con le
+        $("ul.list-post :nth-child(3n)").css("color", "grey");// lay ra phan tu chia het cho 3
+
+
+        //   $("ul.list-post li:only-child()").css("color", "grey");// chon phan tu con duy nhat cua phan tu cha
+
+
+
+    });
+
+
+
+
+</script>
+
+
+</html>

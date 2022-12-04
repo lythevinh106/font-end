@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+
+
+<style>
+    .btn-add {
+        font-size: 20px;
+        padding: 10px;
+        color: white;
+        background-color: aqua;
+        display: inline-block;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        opacity: 1;
+
+
+    }
+
+
+
+    .header {
+        background-color: forestgreen;
+        color: white;
+        width: 100%;
+
+    }
+
+    .area-container {
+        width: 100%;
+        height: 300px;
+        background-color: white;
+        box-shadow: 0px 0px 2px 0px black;
+        position: relative;
+    }
+
+    textarea {
+        width: 100%;
+        height: 350px;
+        outline: none;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+
+
+    }
+
+    .area.hide {
+        display: block;
+    }
+
+    span {
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .content.active {
+        display: none;
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <div class="btn-add">them</div>
+
+
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <span class="write">ghi</span>
+                <span class="xoa">xoa</span>
+            </div>
+
+            <div class="area-container">
+                <textarea name="" id="" class="area">  </textarea>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+<script>
+    $(".btn-add").click(function () {
+        $(".container").append(` 
+            <div div class= "content" id="khac">
+            <div class="header">
+                <span class="write">ghi</span>
+                <span class="xoa">xoa</span>
+            </div>
+
+            <div class="area-container">
+                <textarea name="" id="" class="area">  </textarea>
+            </div>
+
+
+        </div > `)
+
+
+    })
+
+
+    $(".container").on("click", ".write", function () {
+        var a = $(this).parent().next(".area-container").children();
+        a.toggleClass("hide")
+    })
+
+
+    $(".container").on("click", ".xoa", function () {
+
+        $(this).parents(".content").css({
+            display: "none",
+            opacity: 0,
+
+
+
+        })
+
+
+
+    })
+
+    // $(".write").each(function () {
+
+    //     $(this).click(function () {
+
+    //         var a = $(this).parent().next(".area-container").children();
+
+    //         a.toggleClass("hide")
+    //     })
+    // })
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

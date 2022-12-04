@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+    <!--link huong dan  : https://thienanblog.com/javascript/jquery/huong-dan-su-dung-jquery-validation/-->
+
+    <style>
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .error {
+            color: red;
+        }
+
+        input {
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row centered-form">
+            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Sign Up</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" name="registration" id="form">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="firstname" id="firstname" class="form-control input-sm"
+                                            placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="lastname" id="lastname" class="form-control input-sm"
+                                            placeholder="Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" class="form-control input-sm"
+                                    placeholder="Email Address">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" name="password" id="password"
+                                            class="form-control input-sm" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" name="password_confirmation" id="password_confirmation"
+                                            class="form-control input-sm" placeholder="Confirm Password">
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" value="Register" class="btn btn-info btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        $("#form").validate({
+            rules: {
+                firstname: {
+                    required: true,
+                    maxlength: 10
+                },
+                lastname: {
+                    required: true,
+                    maxlength: 10
+                },
+                email: {
+                    required: true,
+                    email: true
+                }
+                ,
+                password: {
+                    required: true,
+                    maxlength: 10,
+                    minlength: 2,
+                },
+
+                password_confirmation: {
+                    required: true,
+                    equalTo: password
+                }
+            },
+            messages: {
+                firstname: {
+                    required: "ban khong dc de trong o nay",
+                    maxlength: "ki tu khong dc lon hon 10"
+                },
+                lastname: {
+                    required: "ban khong dc de trong o nay",
+                    maxlength: "ki tu khong dc lon hon 10"
+
+
+                },
+                email: {
+                    required: "k dc bo trong o nay",
+                    email: "nhap k dung dinh dang email"
+                },
+
+                password: {
+                    required: "k dc bo trong o nay",
+                    maxlength: "ki tu khong dc lon hon 10",
+                    minlength: "ki tu khong dc be hon 2"
+                }
+                ,
+                password_confirmation: {
+
+                    required: "k dc bo trong o nay",
+                    equalTo: "mat khau nhap lai khong hop le"
+                }
+
+            }
+
+        }
+
+        )
+
+    </script>
+
+</body>
+
+</html>

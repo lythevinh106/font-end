@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        background-color: blueviolet;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+
+
+    }
+
+    .btn {
+        background-color: wheat;
+        padding: 10px 0;
+        font-size: 20px;
+        color: red;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        width: 200px;
+        text-align: center;
+
+
+    }
+
+    .item {
+        background-color: wheat;
+        padding: 10px 0;
+        font-size: 20px;
+        color: red;
+
+        cursor: pointer;
+        width: 200px;
+        text-align: center;
+        margin-bottom: 20px;
+
+
+
+
+
+    }
+
+    .content {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="btn">
+            Show
+        </div>
+
+
+        <div class="content">
+
+        </div>
+    </div>
+
+</body>
+<script>
+
+
+
+
+
+    var dem = 0;
+
+
+    $(".btn").click(function () {
+
+        $(".content").append(`<div class="item">${Math.floor(Math.random() * 3) + 1}</div>`)
+
+        dem++
+        var a = $(".item").length
+        if (a > 0) {
+            setInterval(function () {
+                $(`.item:nth-child(${a})`).css("display", "none")
+
+            }, 4000)
+        }
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

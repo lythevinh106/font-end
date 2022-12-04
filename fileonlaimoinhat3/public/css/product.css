@@ -1,0 +1,99 @@
+.content-product__title {
+  color: rgb(51, 51, 51);
+  font-family: -apple-system;
+  font-size: 19.5px;
+  font-weight: 700;
+  margin: 16.185px 0px;
+}
+.content-product__main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-product__main-item {
+  padding: 0;
+  flex-basis: 19%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  font-size: 13px;
+  margin: 0px 1% 1% 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-product__main-item-img {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 150px;
+  max-height: 336px;
+}
+.content-product__main-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content-product__main-item-title {
+  list-style: none;
+  padding: 0 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+.content-product__main-item-price {
+  padding: 0 15px;
+}
+.content-product__main-item-price span:nth-child(1) {
+  color: rgb(253, 71, 90);
+  display: inline;
+  font-size: 18px;
+  font-weight: 700;
+}
+.content-product__main-item-price span:nth-child(2) {
+  color: rgb(51, 51, 51);
+  display: inline;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.content-product__main-item-sale {
+  padding: 12px 5px 5px 5px;
+}
+.content-product__main-item-sale .sale-box {
+  background-color: #f7941e;
+  border-radius: 3px;
+  box-shadow: #000000 0px 4px 6px 0px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 5px;
+}
+.content-product__main-item-sale span:nth-child(2) {
+  margin-left: 3px;
+}
+.content-product__view-plus {
+  text-align: center;
+}
+.content-product__view-plus .btn {
+  background-color: #ffffff;
+  border-color: #004b3f;
+  border-color: #004b3f;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: #000000 0px 4px 6px 0px;
+  color: #004b3f;
+  display: inline-block;
+  font-family: -apple-system;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 30px 0px 20px;
+  padding: 6px 50px;
+  text-align: center;
+}
+.content-product__view-plus .btn:hover {
+  background-color: #004b3f;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=product.css.map */

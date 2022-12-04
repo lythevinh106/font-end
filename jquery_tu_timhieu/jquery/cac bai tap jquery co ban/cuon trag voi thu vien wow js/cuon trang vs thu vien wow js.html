@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!--<script type="text/javascript" src="WOW.js"> </script>-->
+    <link rel="stylesheet" href="animate.css">
+    <!--chen thu vien css animate-->
+</head>
+
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav.menu {
+        width: 100%;
+        background: #ffffff;
+    }
+
+    nav.menu ul {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav.menu ul li {
+        padding: 10px 12px;
+        font-size: 20px;
+        list-style: none;
+        margin: 0px 20px;
+        cursor: pointer;
+    }
+
+    .co-dinh-menu {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+        box-shadow: 2px 5px 5px rgb(0, 0, 0, 0.35);
+    }
+
+    .content {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .content img {
+        width: 100%;
+        margin: 40px 0px;
+    }
+
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+        background: rgb(0, 0, 0, 0.7);
+        font-size: 35px;
+        color: whitesmoke;
+        text-align: center;
+        vertical-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        margin-left: -25px;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .back-to-top.hien-ra {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li>Trang chủ</li>
+            <li>Giới thiệu</li>
+            <li>Tuyển dụng</li>
+        </ul>
+    </nav>
+
+
+    <div class="content">
+        <img src="cake-2.jpeg">
+        <img class="hinh-2 wow bounceInLeft" data-wow-delay="1s" src="cake-3.jpeg">
+        <img class="hinh-3 wow  bounceInUp" src="cupcake-1.jpeg">
+    </div>
+
+
+    <button>backtotop</button>
+    <script type="text/javascript" src="wow.min.js"></script>
+    <script type="text/javascript">// su dung thu vien o day:https://wowjs.uk/docs.html
+
+        new WOW().init();
+
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <button id="btn">clickkkkkkkkkkkk</button>
+
+    <form action="">
+        <table id="table">
+            <tr>
+                <td>2</td>
+                <td>3</td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+
+            </tr>
+        </table>
+    </form>
+
+
+
+</body>
+
+<script>
+
+    console.log($('#table').text())// la ra noi dung gomf cac the dc hien thi ra man hinh
+    console.log($('#table').text('ly the vinh'))// =thay doi noi dung dc hien thi ra man hinh
+
+
+
+    console.log($('#table').html())//lay ra noi dung the gom ca ca the con
+    console.log($('#table').html("<b>noi dung moi</b>"))// thay the toan bo noi dung cua ben trong the ay bang  the b
+
+    //// chen them noi ung ben trong the
+    $('#table').append('<b>ly the vinh</b')// them vao cuoi table 1 the b
+    $('#table').prepend('<b>ly the vinh</b')// them vao dau table 1 the b
+
+    //// chen them noi dung ben ngoai the html
+    $('#table').after('<b>ly the vinh</b')// them vao ben ngoai sau noi dung the
+
+    $('#table').before('<b>ly the vinh</b')// them vao ben ngoai truoc noi dung the
+
+    /// xoa bo or thay the noi dung cua the html
+
+
+
+    $('#table').empty();//lam rong noi dung ben trong the table
+    $('#table').remove(); // or .detach la xoa lun the table
+
+    $('#table').unwrap();// xoa the cha gan nhat cua table laf the form
+    $('#table').replaceWith("<b> ly the vinh<b>")// xoa han lun table va thay bang the b
+
+    //$('<b>ly the vinh<b>').replaceAll('td');// thay the toan bo noi cua cac seletor 
+
+    //// tac dong cau truc html
+
+    $('#table').wrap("<div></div>")// them 1 thẻ div cha bao trùm nó
+
+
+
+    $('#table td').wrapAll("<div></div>")// tat ca cac the td dc them 1 the div cha bao trum
+
+
+    $('#table td').wrapInner("<div></div>")// bao bọc noi dung ben trong cau the bang the div
+
+
+
+</script>
+
+</html>

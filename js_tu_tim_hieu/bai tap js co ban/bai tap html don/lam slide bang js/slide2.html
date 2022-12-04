@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .slider {
+
+        width: 80%;
+
+
+        margin: 0 auto;
+
+
+        position: relative;
+        overflow: hidden;
+
+
+    }
+
+    .slide {
+
+        width: 10000px;
+        height: 400px;
+        display: flex;
+        transition: all 0.5s linear;
+
+
+    }
+
+
+
+
+
+
+
+
+    img {
+        width: 1000px;
+        height: 100%;
+
+
+
+
+
+
+
+    }
+
+
+
+    .slide.current .content {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+
+
+    .btn-right,
+    .btn-left {
+        position: absolute;
+
+        font-size: 50px;
+        color: red;
+        top: 45%;
+        z-index: 2;
+        border-radius: 50%;
+        padding: 15px 30px;
+        outline: none;
+        border-color: white;
+    }
+
+    .btn-right {
+
+        right: 20px;
+    }
+
+    .btn-left {
+        left: 20px;
+
+
+    }
+</style>
+
+<body>
+    <div class="slider">
+
+
+        <div class="slide">
+
+            <img src="20171006_Nghề-thư-ký-văn-phòng-có-dễ-như-mọi-người-vẫn-nó.png" alt="">
+
+
+
+            <img src="bong-den-dep-trang-tri-quan-cafe-233.jpg" alt="">
+
+
+            <img src="chup-hinh-kien-truc-11.jpg" alt="">
+        </div>
+
+
+
+        <button class="btn-right"> &gt;</button>
+        <button class="btn-left"> &lt;</button>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+<script src="slide2.js">
+
+
+
+
+</script>
+
+</html>

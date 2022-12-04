@@ -1,0 +1,11 @@
+ul {
+    & > li {
+        cursor: pointer;
+    }
+    & > li.completed {
+        color: red;
+    }
+    & > li.new {
+        color: black;
+    }
+}

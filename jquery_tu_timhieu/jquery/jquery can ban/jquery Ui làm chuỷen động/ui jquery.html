@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <div class="box1">
+
+
+    </div>
+
+</body>
+
+<script>
+    ////////////hieu ung hiển thị và ẩn
+    $('.box1').show()// dung de hien thi
+    $('.box1').show()([duration])// gần gióng như transíition mac định là 400ms
+    $('.box1').show()([easing])// phuong thức chuyển động như linear
+    $('.box1').show()([HandlerFunction])//khi chuyển động kết thúc sẽ làm j tiếp theo 
+
+    // tong quat
+    $('.box1').show()([duration], [easing], [HandlerFunction])
+
+    ///////
+
+
+    ////////////hieu ung  toogle khi click: dang an thi hien dang hien thi an
+    $('.box1').toggle()// dung de hien thi
+    $('.box1').toggle()([duration])// gần gióng như transíition mac định là 400ms
+    $('.box1').toggle()([easing])// phuong thức chuyển động như linear
+    $('.box1').toggle()([HandlerFunction])//khi chuyển động kết thúc sẽ làm j tiếp theo 
+
+    // tong quat
+    $('.box1').toggle()([duration], [easing], [HandlerFunction])
+
+
+
+
+
+    /////slidedown: hien thi hieu ung truot: kieeu nhu drop down// slideUp an hieu ung di
+    $('.box1').slideDown()// dung de hien thi
+    $('.box1').slideDown()([duration])// gần gióng như transíition mac định là 400ms
+    $('.box1').slideDown()([easing])// phuong thức chuyển động như linear
+    $('.box1').slideDown()([HandlerFunction])//khi chuyển động kết thúc sẽ làm j tiếp theo 
+
+    // tong quat
+    $('.box1').slideDown()([duration], [easing], [HandlerFunction])
+
+
+
+
+    /// slideToggle(): an/hien voi hieu ung truoc
+    $('.box1').slideToggle()// dung de hien thi
+    $('.box1').slideToggle()([duration])// gần gióng như transíition mac định là 400ms
+    $('.box1').slideToggle()([easing])// phuong thức chuyển động như linear
+    $('.box1').slideToggle()([HandlerFunction])//khi chuyển động kết thúc sẽ làm j tiếp theo 
+
+    // tong quat
+    $('.box1').slideToggle()([duration], [easing], [HandlerFunction])
+
+
+
+
+    //// ham fadeIn: tang dan opaciti den 1: k co easing--fadeOut(giam dan opacitive 0)
+
+    $('.box1').fadeIn()// dung de hien thi
+    $('.box1').fadeIn()([duration])// gần gióng như transíition mac định là 400ms
+
+    $('.box1').fadeIn()([HandlerFunction])//khi chuyển động kết thúc sẽ làm j tiếp theo 
+
+    // tong quat
+    $('.box1').fadeIn()([duration], [HandlerFunction])
+
+
+    //// ham fadeToggle: an hien vs opaciti
+
+
+    $('.box1').fadeToggle// dung de hien thi
+    $('.box1').fadeToggle([duration])// gần gióng như transíition mac định là 400ms
+
+    $('.box1').fadeToggle([HandlerFunction])//khi chuyển động kết thúc sẽ làm j tiếp theo 
+
+    // tong quat
+    $('.box1').fadeToggle([duration], [HandlerFunction])
+
+
+    //// hamf fadeTo
+
+    $('.box1').fadeTo(duration, x)//x laf opaciti tu o den 1
+    $('.box1').fadeTo(duration, x, function () { })//
+
+</script>
+
+</html>

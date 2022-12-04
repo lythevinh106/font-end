@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+     <style type="text/css">
+     	body{
+     		width: 100%;
+     		height: 100%;
+     		background-color: grey;
+     	}
+     	*{
+     		margin: 0;
+     		padding: 0;
+     		box-sizing: border-box;
+     	}
+     	#header{
+     		background-color: white;
+
+     	}
+     	#header_iner{
+     		width: 1024px;
+     		margin: 0 auto;
+     		display: flex;
+     		align-items: center;
+     		justify-content: space-between;
+     		position: relative;
+     	}
+     	#logo{
+     		background-image: url("https://evondev.com/wp-content/uploads/2019/12/evondev-logo.png");
+     		width: 20px;
+     		height: 20px;
+     		background-size: 100% 100%;
+     	}
+     	#menu{
+     		display: flex;
+     		justify-content: space-between;
+     		text-align: center;
+     		list-style: none;
+     	}
+     	#menu_item{
+     		margin:0 20px;
+
+
+
+     		
+     	}
+     	#menu_item:hover #menu_child{
+     		opacity: 1;
+     		visibility:visible;/*lam hien len*/
+     	}
+     	#thea1{
+     		text-decoration: none;
+     		color: black;
+     		text-transform: uppercase;
+     		font-size: 1.4rem;
+     		display: block;
+     		padding:20px;
+
+
+     	}
+     	#menu_child{
+     		position: absolute;
+     		width: 100%;
+     		top:100%;
+     		left: 0;
+     		
+     		display: flex;
+     		opacity: 0;  /* 2 thuoc tinh giup lam an di*/
+     		visibility: hidden;
+     		transition: 5s linear;
+     	}
+     	#menu_child_item{
+     		width: 25%;
+     	}
+     #menu_child_item h4{
+     	color: white;
+     	font-size: 1.4rem;
+     	padding: 2rem;
+     	background-color: blue;
+     }
+      #menu_child_item ul{
+      	list-style: none;
+      }
+      #menu_child_item li{
+      	padding:20px;
+      	border-top:1px solid grey;
+      	background-color: white;
+
+      }
+     </style>
+</head>
+<body>
+	<div id="header">
+		<div id="header_iner">
+			<div id="logo">
+				
+			</div>
+			<ul id="menu">
+				<li id="menu_item">
+					<a href="" id="thea1">HOME</a>
+					<div id="menu_child">
+						<div id="menu_child_item">
+							<h4>Element</h4>
+							<ul id="menu_child_list">
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								
+							</ul>
+						</div>
+						<div id="menu_child_item">
+							<h4>Element</h4>
+							<ul id="menu_child_list">
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								
+							</ul>
+						</div>
+						<div id="menu_child_item">
+							<h4>Element</h4>
+							<ul id="menu_child_list">
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								
+							</ul>
+						</div>
+						<div id="menu_child_item">
+							<h4>Element</h4>
+							<ul id="menu_child_list">
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								<li>demo item</li>
+								
+							</ul>
+						</div>
+					</div>
+					
+
+				</li>
+				<li id="menu_item"><a href="#" id="thea1">Page</a></li>
+				<li id="menu_item"><a href="#" id="thea1">BLog</a></li>
+				<li id="menu_item"><a href="#" id="thea1">COntact</a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

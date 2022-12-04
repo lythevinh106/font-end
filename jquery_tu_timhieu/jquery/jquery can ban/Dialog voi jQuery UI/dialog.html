@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="thu vien UI/jquery-ui.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('#my-dialog').dialog({/// khi goi toi dialog("open") thi se mo
+                autoOpen: false,//khi su dung auoopen bang false thi viec diều khiển hiển thị sẽ thông qua 2 lệnh đó là dialog("open") ordialog("close")
+                show: { effect: "blind", duration: 1000 },// hieu ung khi bat
+                hide: { effect: "explode", duration: 1000 },// hieu ung khi dong
+                // width: 400, height: "auto",
+                resizable: false,// cho phep nguoi dung thay doi kik thuoc hay khong
+                modal: true, // cho phep bat che do button len,
+                buttons: {
+                    "dongy": function () {
+                        $("#msg").html("ban da dông y")
+                    },
+                    "huybo": function () {
+                        $(this).dialog("close");
+                    }
+                }
+
+            });
+        })
+
+
+        function openDialog() {
+            $('#my-dialog').dialog("open")
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <a href="javascript:openDialog()">bấm zô</a>
+    <div id="my-dialog">
+        day la noi dung thong bao
+        <span id="msg"></span>
+    </div>
+
+
+
+</body>
+
+
+
+</html>

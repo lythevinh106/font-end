@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <!--thu vien gsap-->
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .content {
+        width: 1170px;
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .khoi1,
+    .khoi2,
+    .khoi3,
+    .khoi4,
+    .khoi5,
+    .khoi6 {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+
+    .khoi2 {
+        background-color: blue;
+    }
+
+    .khoi3 {
+        background-color: orange;
+    }
+
+    .khoi4 {
+        background-color: pink;
+    }
+
+    .khoi5 {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <div class="khoi1"></div>
+
+
+    </div>
+    <div class="content">
+        <div class="khoi2"></div>
+
+
+    </div>
+
+
+    <div class="content">
+        <div class="khoi3"></div>
+
+
+    </div>
+    <div class="content">
+        <div class="khoi4"></div>
+        <div class="khoi4"></div>
+        <div class="khoi4"></div>
+
+    </div>
+
+
+    <div class="content">
+        <div class="khoi5"></div>
+        <div class="khoi5"></div>
+        <div class="khoi5"></div>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+<script>
+
+    TweenMax.to($(".khoi1"), 1, { x: 200, opacity: 0 })//vi tri ban dau mac dinh
+    TweenMax.from($(".khoi2"), 2, { scale: 2, opacity: 0.1, delay: 2 })// // vi tri sau di chuyen
+
+
+    TweenMax.fromTo($(".khoi3"), 2, { y: 200, opacity: 0.3 }, { y: -200, opacity: 1 })// cho di tu dau den dau
+
+    TweenMax.staggerTo($(".khoi4"), 1, {// cho nhung khoi trong nos chuyen dong lan luot trong 0.2s
+        y: 150,
+        opacity: 0,
+
+    }, 0.2)
+
+
+    TweenMax.staggerFrom($(".khoi5"), 1, {// cho nhung khoi trong nos chuyen dong lan luot trong 0.2s
+        y: 150,
+        opacity: 0,
+
+    }, 0.2)
+
+
+    TweenMax.staggerFrom($(".khoi5"), 1, {//https://greensock.com/docs/v2/Easing lay chuyen dong easing
+        y: -550,
+        opacity: 0,
+
+        ease: Bounce.easeOut,
+
+
+
+
+
+
+
+    }, 0.2)
+</script>
+
+</html>

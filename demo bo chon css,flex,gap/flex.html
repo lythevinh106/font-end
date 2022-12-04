@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+    }
+
+    .box {
+
+        width: 80%;
+        /* max-width: 80%; */
+        /* width: 100%; */
+        background-color: yellow;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+        /* margin: 0 -20px; */
+        /* overflow: hidden; */
+
+        gap: 10px;
+
+    }
+
+
+    .child {
+        /* margin: 0 20px; */
+        background-color: red;
+        width: calc((100% - 20px*2)/3);
+        height: 300px;
+        flex: 1;
+
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="child">khoi</div>
+        <div class="child">khoi</div>
+        <div class="child">khoi</div>
+        <!-- <div class="child">khoi</div>
+        <div class="child">khoi</div>
+        <div class="child">khoi</div>
+        <div class="child">khoi</div> -->
+    </div>
+</body>
+
+</html>

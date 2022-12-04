@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+    <style>
+        .box {
+
+            width: 500px;
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">click hear</button>
+
+    <img src="anh-banner.jpg" id="image1" alt="">
+
+    <div class="box" id="box1">
+        vinh
+    </div>
+
+    <div class="the1">
+        vinh3333
+    </div>
+
+
+</body>
+
+<script>
+
+    /// atribute
+    console.log($('.box').attr("class"));// lay ra noi dung cua atribute...neu seletor nhieu doi tuong thi lay noi dung cua thuoc tinh dau tien
+    console.log($('.box').attr("id", "box2"));// thay doi noi dung cua atribute ....neu selector nhieu thi ap dung cho tat ca
+
+    console.log($('.box').removeAttr("box"));//xoa atribute.. neu select nhieu doi tuong thi ap dung cho tat ca*/
+    // class
+
+    console.log('class')
+    $('.the1').addClass('the2')// them 1 class mowi
+    console.log($('.the1'))
+
+
+    $('.the1').removeClass('the2')// xoa 1 class trong the
+    console.log($('.the1'))
+
+
+    $('.the1').hasClass('the2')// kiem tra xem class co ton tai khong neu co tra ver true
+
+    //css
+
+    console.log('css')
+    console.log($('.box').css('width'));// doc thuoc tinh
+    console.log($('.box').css('heght', '600px'));// them thuoc tinh
+
+    console.log($('.box').width());// giong nhu offf set width
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>

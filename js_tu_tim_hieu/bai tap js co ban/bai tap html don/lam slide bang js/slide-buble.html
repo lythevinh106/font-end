@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    .content {
+        width: 800px;
+        /*luc nay wid da dc thay the*/
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+
+
+
+
+    }
+
+    .container {
+        height: 400px;
+        display: flex;
+        transition: all 1s linear;
+
+    }
+
+    .img {
+        height: 100%;
+        object-fit: cover;
+
+
+    }
+
+    .img img {
+        flex-shrink: 0;
+        flex-grow: 1;
+        height: 100%;
+        object-fit: cover;
+        width: inherit;
+
+    }
+
+    .btn-box {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+
+    }
+
+    .btn {
+        width: 16px;
+        height: 16px;
+        background-color: red;
+        margin: 0 20px;
+    }
+
+    .btn:hover {
+        background-color: blue;
+    }
+
+
+    .btn-next {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        font-size: 20px;
+        background-color: red;
+        transform: translateX(-50%);
+        cursor: pointer;
+
+
+    }
+
+    .btn-prv {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        font-size: 20px;
+        background-color: red;
+        transform: translateX(-50%);
+        cursor: pointer;
+
+
+
+    }
+
+    .btn.blue {
+        background-color: blue;
+    }
+</style>
+
+<body>
+
+    <div class="content">
+        <div class="container">
+            <div class="img"><img src="3-noi-that-hien-dai-nha-dep (1).jpg" alt=""></div>
+            <div class="img"><img src="bong-den-dep-trang-tri-quan-cafe-233.jpg" alt=""></div>
+            <div class="img"><img src="chup-hinh-kien-truc-11.jpg" alt=""></div>
+            <div class="img"><img src="maxresdefault.jpg" alt=""></div>
+
+        </div>
+
+
+        <div class="btn-next">NExt</div>
+        <div class="btn-prv">prv</div>
+        <div class="btn-box">
+            <div class="btn blue"></div>
+            <div class="btn"></div>
+            <div class="btn "></div>
+            <div class="btn "></div>
+
+        </div>
+    </div>
+
+</body>
+<script src="slide buble.js"></script>
+
+</html>

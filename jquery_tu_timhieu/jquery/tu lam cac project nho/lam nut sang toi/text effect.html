@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        top: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {}
+
+    .btn-container {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        background-color: wheat;
+        border: 1px solid;
+        border-radius: 25px;
+        height: 30px;
+        outline: none;
+        border: none;
+
+
+
+    }
+
+    .btn {
+        position: absolute;
+        top: 50%;
+        width: 28px;
+        height: 28px;
+        left: 0;
+
+        transform: translateY(-50%);
+        border-radius: 50%;
+        transition: all 0.2s linear;
+        outline: none;
+        border: none;
+
+
+
+
+    }
+
+    .btn.active {
+        position: absolute;
+        top: 50%;
+        width: 28px;
+        height: 28px;
+        left: 100%;
+
+        transform: translate(-100%, -50%);
+        border-radius: 50%;
+
+
+    }
+
+    .btn-container.active {
+        background-color: aquamarine;
+    }
+
+    .content.active {
+        background-color: red;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+
+    }
+</style>
+
+<body>
+
+    <div class="content">
+        <div class="btn-container">
+            <button class="btn">
+
+            </button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(".btn-container").click(function () {
+
+        $(".btn").toggleClass("active")
+        $(this).toggleClass("active")
+        $(".content").toggleClass("active")
+
+
+    })
+</script>
+
+</html>

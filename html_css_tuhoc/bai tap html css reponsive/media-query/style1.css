@@ -1,0 +1,5 @@
+@media screen and (max-width: 1024px){/*nho hơn hoặc bằng 1024 px thì áp dụng thuộc tinh này*/
+	h1{
+		color: red;
+	}
+}

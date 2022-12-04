@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="progressbar dang thanh .css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+    <script src="progressbar dang thanh.js"></script>
+
+    <!-- //https://kingrayhan.github.io/LineProgressbar/installation.html -->
+</head>
+
+
+<style>
+    #progressbar1 {
+        width: 500px;
+        margin: 0 auto;
+        color: green;
+
+    }
+</style>
+
+<body>
+    <div id="progressbar1" line-progressbar data-percentage="25" data-progress-color="#1abc9c"></div>
+
+
+</body>
+<script>
+    $('#progressbar1').LineProgressbar({
+        percentage: 95,
+        fillBackgroundColor: '#9b59b6'
+    }
+    );
+
+    // https://kingrayhan.github.io/LineProgressbar/jquery-options-demo.html
+</script>
+
+</html>

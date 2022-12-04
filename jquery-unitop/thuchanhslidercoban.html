@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+
+    }
+
+    body {
+
+        margin: 0;
+    }
+
+    #wrapper {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    #wp-slider {
+        width: 400px;
+    }
+
+    .show-picture {
+        height: 300px;
+        position: relative;
+        width: 100%;
+    }
+
+    ul.list-thump {
+        /* //  display: flex; */
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    ul.list-thump li {
+        width: 80px;
+        z-index: 2;
+    }
+
+    .slider-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .slider-nav div {
+        /* position: absolute; */
+        top: 0px;
+        color: red;
+        position: relative;
+        top: -150px;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        text-align: center;
+
+        cursor: pointer;
+        /* top: 50%; */
+
+    }
+
+    .active {
+        border: 2px solid red;
+    }
+</style>
+
+<body>
+
+
+    <div id="wrapper">
+
+        <div id="wp-slider">
+
+            <div class="show-picture">
+                <img src="images/picture-1.png" alt="">
+                <div class="slider-nav">
+                    <div class="prev-btn">prv</div>
+                    <div class="next-btn">next</div>
+
+
+                </div>
+            </div>
+            <ul class="list-thump">
+                <li class="active"> <img src="images/picture-1.png" alt=""></li>
+                <li> <img src="images/picture-2.png" alt=""></li>
+                <li> <img src="images/picture-3.png" alt=""></li>
+                <li> <img src="images/picture-4.png" alt=""></li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    $(document).ready(function () {
+
+
+        thumbnail_is_click();
+
+        $(".next-btn").click(function () {
+
+
+            if ($(".list-thump li:last").hasClass("active")) {
+                $(".list-thump li:first").click();
+            }
+            else {
+
+                $(".list-thump li.active").next().click();
+            }
+
+
+
+
+        })
+
+        $(".prev-btn").click(function () {
+
+
+            if ($(".list-thump li:first").hasClass("active")) {
+                $(".list-thump li:last").click();
+            }
+            else {
+
+                $(".list-thump li.active").prev().click();
+            }
+
+
+
+
+        })
+
+
+
+    })
+
+
+    function thumbnail_is_click() {
+        $(".list-thump li").click(function () {
+            $(".list-thump li").removeClass("active");
+
+
+            if ($(this).hasClass("active")) {
+                return;
+            }
+            else {
+                $(this).addClass("active");
+            }
+
+
+
+            let get_attr_img_has_click = $(this).children("img").attr("src");
+
+            $(".show-picture img").attr("src", get_attr_img_has_click);
+
+            // console.log(get_attr_img_has_click);
+
+
+        });
+
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</html>

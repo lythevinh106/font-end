@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css"></style>
+	<link rel="stylesheet" href="../fontawesome-free-5.15.2-web/css/all.min.css"/>
+</head>
+<body>
+
+	<style type="text/css">
+		body{
+			background-color: violet;
+		}
+		*{
+			margin:0;
+			padding: 0;		}
+		#container{
+			width: 300px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: white;
+			margin: 15px auto;
+			padding: 15px 10px;
+			cursor: pointer;
+			position: relative;
+			box-sizing: border-box;
+
+
+		}	
+		#list_item{
+			position: absolute;
+			width: 100%;
+			top: 108%;
+			left: 0;
+			background-color:rgba(255,255,255,0.5 );
+			border-radius: 3px;
+			visibility:hidden;
+
+		}
+		#container:hover #list_item{
+			visibility:visible;
+			animation: chuyendong1 ease-in 1.5s;
+		}
+		@keyframes chuyendong1{
+			0%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 1;
+
+			}
+
+		}
+
+
+		#list_item ul{
+			list-style: none;
+		}
+		#list_item ul li{
+			padding: 8px 0;
+			padding-left: 5px;
+		}
+		#list_item ul li:hover{
+			background-color: rgba(0,0,0,0.2); 
+			
+
+		}
+
+
+		
+	</style>
+
+
+</body>
+  
+   <div id="container">
+   	   <div id="container_left">
+   	   	  <div id="thediv1">
+   	   	  	Select iteam
+   	   	  	
+   	   	  </div>
+   	   </div>
+   	  <div id="container_right">
+   	  	   <i class="fas fa-caret-down"></i>
+   	  </div>
+      <div id="list_item">
+      	<ul>
+      		<li>Popsi</li>
+      		<li>Popsi</li>
+      		<li>Popsi</li>
+      		
+      	</ul>
+      </div>
+
+
+   	
+
+   </div>
+</html>

@@ -1,0 +1,286 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+:root{
+	--white-color:rgba(255,255,255,9);
+	--orange-main:rgba(255,99,71);
+	--main-width:1200px;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family: 
+}
+header{
+	width: 100%;
+	height: 100vh;
+	background:linear-gradient(0,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("elle-viet-nam-streetstyle-tuan-le-thoi-trang-35.jpg");
+    background-size: cover;
+    position: relative;
+
+}
+header #header--top {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding:30px 0; 
+	align-items: center;
+
+
+}
+header #header--top #logo{
+	font-size: 28px;
+	width: 50%;
+	color: var(--white-color);
+	font-weight: 600;
+
+
+}
+header #header--top #nav {
+	 width: 50%;
+	 display: flex;
+	 justify-content: flex-end;
+
+}
+
+header #header--top #nav ul {
+	list-style: none;
+	
+	
+	
+}
+
+header #header--top #nav ul li{
+	display: inline-block;
+}
+header #header--top #nav ul li a{
+	text-decoration: none;
+	color: var(--white-color);
+
+}
+header #header--top #nav ul li:nth-last-child(n+2){
+   padding: 0 20px;
+}
+header #header--top #nav ul #upload{
+     padding: 7px 26px;
+	border-radius: 16px;
+	background: var(--orange-main) ;
+
+
+}
+header #header--top #nav ul li a:nth-last-child(n+2):hover{
+	color: var(--orange-main);
+}
+
+header #header--top #nav ul #upload:hover{
+    
+	transform: scale(0.95);
+}
+header #header--top #nav ul #upload a{
+	color: white;
+}
+header #header--title{
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%,50%);
+      width: 600px;
+}
+header #header--title h2{
+	color: var(--white-color);
+	font-size: 45px;
+	text-align: center;
+}
+header #header--title input{
+	margin-top: 30px;
+	width: 100%;
+	height: 40px;
+	border: 0;
+	border-radius: 16px;
+		padding-left:10px; 
+		outline: none;
+}
+header #header--title p{
+	font-weight: 500;
+	color: var(--white-color);
+	text-align: center;
+	font-size: 14px;
+	margin-top:14px; 
+}
+#content{
+	width: var(--main-width);
+	margin: auto;
+	padding:20px 0; 
+
+
+}
+#content #title{
+	color: rgba(0,0,0,0.8);
+	padding: 10px 10px;
+	font-size: 19px;
+	font-weight: 580;
+
+}
+#grid-image{
+	width:100%;
+	
+    height: 1000px;
+    	display: flex;
+  
+   flex-wrap: wrap;
+   flex-direction: column;
+
+    
+   
+
+
+}
+.grid-image-primary:hover{
+	transform: scale(1.06);
+	transition: 0.3s;
+}
+.grid-image-primary{
+	
+      
+     box-sizing: border-box; 
+     width: 33.3%;
+     background-image: url("elle-viet-nam-streetstyle-tuan-le-thoi-trang-35.jpg");
+	background-size: cover;
+	border: 10px solid white;
+
+}
+
+
+
+#grid-image-1{
+	height:300px; 
+	
+	
+		
+
+	
+}
+
+#grid-image-2{
+	height:200px;
+	
+	
+	
+	
+}
+
+#grid-image-3{
+	height: 500px;
+	
+	
+	
+
+	
+}
+
+#grid-image-4{
+	height:500px;
+	
+	
+
+	
+}
+
+#grid-image-5{
+	height:300px;
+	
+	
+	
+
+	
+}
+
+#grid-image-6{
+	height: 200px;
+	
+	
+	
+	
+}
+
+#grid-image-7{
+	height: 300px;
+	
+	
+	
+
+	
+}
+
+#grid-image-8{
+	height: 400px;
+	
+	
+	
+}
+
+#grid-image-9{
+	height: 300px;
+
+
+	
+}
+#content-footer {
+	width: var(--main-width);
+	margin: 0 auto;
+
+}
+#content-footer button{
+	color: var(--white-color);
+	padding: 10px 50px;
+	border-radius: 16px;
+	background-color:var(--orange-main);
+	margin: 0 auto;
+	display: block;
+	border: 0;
+	 margin-bottom: 7px;
+	 outline: none;
+	 cursor: pointer;
+
+
+	
+}
+#content-footer button:hover{
+	transform: scale(0.95);
+}
+#content-footer h2{
+	text-align: center;
+	margin: 30px 0;
+	color: rgba(0,0,0,0.8);
+	font-size: 30px;
+	font-weight: 500;
+}
+#content-footer__logo{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	
+
+}
+#content-footer__logo #logo{
+	border: 0.8px solid grey;
+	padding:12px 40px;
+	box-shadow:2px 2px 3px 1px rgba(0,0,0,0.1);
+     
+
+}
+#content-footer__logo #logo:hover{
+	transform: translateY(-5px);
+	transition: 0.5s;
+}
+
+
+
+
+
+

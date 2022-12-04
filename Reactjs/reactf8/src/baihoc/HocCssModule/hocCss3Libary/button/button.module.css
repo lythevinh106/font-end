@@ -1,0 +1,21 @@
+.button {
+    font-style: italic;
+    color: white;
+  }
+  .active {
+    background-color: green;
+  }
+  .primary {
+    background-color: #0069d9;
+  }
+  .secondary {
+    background-color: #5a6268;
+  }
+  .success {
+    background-color: #218838;
+  }
+
+  .big-size {
+      font-size: 50px;
+  }
+  

@@ -1,0 +1,14 @@
+*{
+	
+	box-sizing: border-box;
+}
+
+.item{
+			text-align: center;
+			min-height: 50vh;
+			background-color: orange;
+			color: white;
+			line-height: 50vh;
+			font-size: 100px;
+			margin-top: 16px;
+		}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="thu vien UI/jquery-ui.css">
+    </link>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="thu vien UI/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div id="PR_Draggable" style="width: 600px ; height:500px ; border: 1px solid;;">
+        <div id="myDraggable" style="width:100px;height:100px ;background-color:#ff0000"></div>
+    </div id="PR_Draggable">
+
+    <div id="myDroppable" style="width: 300px; height: 300px;float: left;border: 1px solid;"></div>
+
+    <div style="clear:both"></div>
+
+</body>
+
+<script>
+
+    //draggable
+    $("#myDraggable").draggable({
+        //containment: "parent",// gioi han trong phan tu cha
+        //  scroll: true,
+        //axis: "x", keo thieu chieu ngang
+        //revert: true,// khi buoong ra no se chay ve vi tri bang dau
+        // helper: "clone",// tao ra ban sao
+
+        drag: function () {
+            $(this).css("background-color", "green"); //khi dang keo  thi mau xanh
+        },
+
+        stop: function () {
+            $(this).css("background-color", "yellow");// khi buong ra thi mau vang
+        }
+
+
+
+
+
+
+    })
+
+
+    //drappable
+
+
+    $('#myDroppable').droppable({
+        accept: "#myDraggable",//acept laf chap nhan the nao dat len no//co the co or khong
+        activate: function () {//active thuong di kem vs accept// active co nghia la khi thanh phan trong accept di chuyen laf nos se thu hien
+            $(this).css('background-color', "red");
+        },
+
+        deactivate: function () {// no se nguoc lai voi active
+            $(this).css('background-color', "");
+        },
+
+        over: function () {
+            $(this).css('background-color', "pink");//khi dua vao no nhung chua tha ra
+        },
+
+        out: function () {// khi thoayt khoir no
+            $(this).css('background-color', "black");
+        },
+        drop: function () {// khi tha vao
+            $(this).css('background-color', "blue");
+        }
+
+
+    })
+
+
+</script>
+
+</html>

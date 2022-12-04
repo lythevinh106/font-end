@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+
+<style>
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: yellow;
+
+    }
+
+
+    .content {
+        width: 1000px;
+        margin: auto;
+    }
+
+    button {
+        position: fixed;
+        color: white;
+        bottom: 20px;
+        left: 20px;
+        padding: 10px;
+        background-color: red;
+        font-size: 30px;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .hien-ra {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s linear;
+
+
+
+    }
+
+    img.active {
+        visibility: visible;
+        opacity: 1;
+
+    }
+</style>
+
+<body>
+
+    <ul class="menu">
+        <li>Trang tru</li>
+        <li>Trang tru</li>
+        <li>Trang tru</li>
+    </ul>
+
+
+    <div class="content">
+        <img class="hinh1" src="cake-2.jpeg" alt="">
+        <img class="hinh2" src="cake-3.jpeg" alt="">
+        <img class="hinh3" src="cupcake-1.jpeg" alt="">
+    </div>
+
+
+    <button>backtotop</button>
+
+</body>
+
+<script>
+
+
+
+    $(window).scroll(function (e) {
+        var pos_body = $("html,body").scrollTop()
+        // console.log(pos_body)
+        if (pos_body > 20) {
+            $(".menu").addClass("sticky")
+        }
+        else {
+            $(".menu").removeClass("sticky")
+        }
+        if (pos_body > 1200) {
+            $("button").addClass("hien-ra")
+        }
+        else {
+            $("button").removeClass("hien-ra")
+        }
+
+
+
+
+
+
+        $(".content").children().each(function (index) {
+            var posImg = $(this).position().top;
+            if (pos_body > posImg - 200) {
+                $(this).addClass("active")
+            }
+
+
+
+        })
+    })
+
+
+
+
+
+    $("button").click(function () {
+        $("html,body").animate({
+            scrollTop: 0
+        }, 1000, "swing")
+    })
+
+
+
+
+
+
+</script>
+
+</html>

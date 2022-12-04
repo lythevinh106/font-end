@@ -1,0 +1,70 @@
+.slick-prev,
+.slick-next {
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.slick-prev::before,
+.slick-next::before {
+  font-size: 20px;
+}
+
+.slick-next {
+  position: absolute;
+  right: 20px;
+}
+
+.slick-prev {
+  position: absolute;
+  left: 20px;
+}
+
+.header-box-main {
+  display: flex;
+  justify-content: flex-start;
+}
+.header-box-main span {
+  padding: 2px 0;
+}
+.header-box-main-fake {
+  width: 80px;
+  height: 100%;
+  background-color: #009981;
+  display: inline-block;
+  z-index: 0;
+}
+.header-box-main-main {
+  display: inline-block;
+  background-color: rgb(0, 72, 61);
+  position: relative;
+  z-index: 2;
+}
+.header-box-main-main a {
+  padding: 0 30px;
+  z-index: 2;
+}
+.header-box-main-main::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  transform: skew(50deg);
+  z-index: 0;
+  top: 0;
+  left: -20px;
+  background-color: rgb(0, 72, 61);
+  z-index: -1;
+}
+
+.back-to-top {
+  position: absolute;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  width: 50px;
+}
+.back-to-top img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=orther.css.map */

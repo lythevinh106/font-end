@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    .box1 {
+        width: 200px;
+        height: 300px;
+        background-color: blue;
+
+    }
+</style>
+
+<body>
+
+    <div class="box1"></div>
+
+</body>
+
+<script>
+    $('.box1').click(() => {
+        change()
+    })
+
+
+
+
+
+
+
+    var status = 1;
+
+
+    function change() {
+        $('.box1').stop(true);
+        if (status == 1) {
+            sizeUp()
+            status = 2
+
+
+        }
+        else if (status == 2) {
+
+
+            sizeDown()
+            status = 1;
+
+        }
+
+
+
+    }
+
+
+    function sizeDown() {
+        $('.box1').animate({   // lam chuyen dong
+            width: "100px",
+            opacity: 0.2,
+
+
+        }, 1000, "linear", () => {
+            change()
+        }
+
+
+
+
+        );
+    }
+
+
+
+    function sizeUp() {
+        $('.box1').animate({   // lam chuyen dong
+            width: "500px",
+            opacity: 1,
+
+        }, 1000, "linear", () => {
+            change()
+        }
+
+
+        );
+    }
+
+
+
+
+
+    //ham stop: dung de dung animate
+
+    /*  $(selector).stop(removeQuery,jumtoend)//:remove =true dong nghia dung moi chuyen dong dang cho..mac dinh la false
+  jumtoend = true thi dừng hiệu ứng sẽ được thay thế bằng cách tiến thẳng tới giá tri cuối trong animate*/
+
+
+</script>
+
+</html>

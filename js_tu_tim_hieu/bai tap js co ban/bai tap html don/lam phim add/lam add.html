@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        background-color: beige;
+        position: relative;
+
+        width: 100%;
+        height: 100vh;
+
+
+    }
+
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: bisque;
+        text-align: center;
+        padding: 50px 0;
+
+
+    }
+
+    h1 {
+        font-size: 25px;
+        margin: 25px 0;
+        color: white;
+
+
+    }
+
+    .number {
+        font-size: 50px;
+        color: cadetblue;
+        margin: 10px 0;
+
+    }
+
+    .add {
+        background-color: aqua;
+        color: aliceblue;
+        font-size: 20px;
+        text-align: center;
+        padding: 4px 10px;
+        margin: 0 20px;
+        min-width: 200px;
+    }
+
+    .remove {
+        background-color: aqua;
+        color: aliceblue;
+        font-size: 20px;
+        text-align: center;
+        padding: 4px 10px;
+        margin: 0 20px;
+        min-width: 200px;
+    }
+</style>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="box">
+            <h1>Counter</h1>
+
+            <div class="number">0</div>
+            <button class="remove">remove</button>
+            <button class="add">add</button>
+
+
+        </div>
+    </div>
+
+</body>
+<script src="lam add.js"></script>
+
+</html>

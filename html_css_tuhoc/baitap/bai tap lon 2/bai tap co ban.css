@@ -1,0 +1,235 @@
+body{
+	margin:0;
+	padding: 0;
+}
+*{
+
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+	--mauchutrangmo:rgba(0,0,0,0.4);
+	--height-header1:50px;
+	--line-height-header-li:50px ; 
+	--font-size-header:14px; 
+}
+#header1{
+	background-color: rgba(0,0,0,0.9);
+	
+	height: var(--height-header1);
+}
+#header1 ul{
+	list-style: none;
+	
+	font-size:var(--font-size-header);
+}
+#header1 ul li{
+	display: inline-block;
+	line-height:var(--line-height-header-li);
+	border-right: 1px solid rgba(255,255,255,0.5) ;
+}
+#header1 ul li a{
+	text-decoration:none;
+	color: rgba(255,255,255,0.8);
+	padding: 0 15px;
+
+}
+#header2{
+    width:100%;
+    height: 400px;
+	background-image: url("afba04dcd0ba1736a9a16aaf683b63fe.png");
+	background-size: 100% 100%;
+	margin-top: 4px;
+	position: relative;
+	
+}
+.nav__bar-btn i{
+	
+	font-size: 25px;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+#content{
+	width: 100%;
+	
+	display: flex;
+	justify-content: space-between;
+	margin-top:15px;
+
+
+}
+#content #content_trai{
+	width:70%;
+	height: 1300px ;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+
+}
+#content #content_phai{
+	width:26%;
+	height: 1300px ;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	
+}
+
+
+#content #content_trai #thediv1{
+	width: 100%;
+	height: 15%;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+
+
+}
+#content #content_trai #thediv1 #thediv_nhotrai{
+	width: 40%;
+	height: 100%;
+	background-image: url("maxresdefault.jpg");
+   background-size: 100% 100%;
+}
+
+#content #content_trai #thediv1 #thediv_nhophai{
+	width: 58%;
+	height: 100%;
+	padding-right: 30px; 
+	
+}
+#content #content_trai #thediv1 #thediv_nhophai h3{
+	margin-bottom: 16px;
+}
+#content #content_trai #thediv1 #thediv_nhophai span{
+
+}
+#content #content_trai #thediv1 #thediv_nhophai h5{
+	color: var(--mauchutrangmo);
+	margin-top: 16px;
+}
+#content #content_phai #thebao1{
+	width: 100%;
+     height: 35%;
+     box-shadow: 0px 0px 1px 1px grey;
+    
+	
+
+
+}
+#content #content_phai #thebao1 #danh_muc{
+	width: 100%;
+	height: 8%;
+	background-color:rgba(0,0,128,0.7);
+	display: flex;
+	padding:0 15px; 
+	align-items: center;
+		
+
+
+}
+#content #content_phai #thebao1 #danh_muc i{
+	font-size: 16px;
+	margin-right: 15px;
+}
+#content #content_phai #thebao1 #danh_muc h3{
+
+
+}
+#content #content_phai #thebao1 #sanpham{
+	width: 100%;
+	height: 92%;
+	padding: 8px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	
+
+
+}
+#content #content_phai #thebao1 #sanpham i{
+	font-size: 20px;
+	padding-right:12px;
+	color: black; 
+
+}
+#content #content_phai #thebao1 #sanpham #thediv_nho{
+	color: var(--mauchutrangmo);
+}
+#content #content_phai #thebao2{
+	width: 100%;
+	height: 60%;
+
+     background-image: url("3-noi-that-hien-dai-nha-dep (1).jpg");
+     background-size: cover;
+     background-position: center;
+	
+
+	
+
+
+} 
+
+#footer{
+	width: 100%;
+	height:80px;
+	background-color: rgba(0,0,0,0.9);
+	margin-top: 50px;
+	padding-left: 150px;
+}
+#footer p{
+	line-height: 80px;
+	color:rgba(255,255,255,0.5);
+}
+.nav-moblie-list{
+	padding: 50px 20px;
+	background-color: grey;
+	position: absolute;
+	top:0;
+	left: 0;
+	transform: translateX(-100%);
+
+}
+.nav__bar-btn i{
+	
+	font-size: 25px;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+.nav-moblie-list>div{
+	padding: 10px 5px;
+
+	
+
+}
+.nav__overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+.nav__input:checked ~ .nav-moblie-list{
+	transform: translateX(0);
+	transition: linear 0.5s; 
+
+
+}
+.nav__input:checked ~ .nav__overlay{
+	display: block;
+}

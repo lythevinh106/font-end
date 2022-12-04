@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <!--chen css fancybox-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <!--chen js fancybox-->
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .content {
+        width: 1200px;
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .content a {
+        display: block;
+        width: 30%;
+        padding: 5px;
+    }
+
+    .content a img {
+        width: 100%
+    }
+</style>
+
+<body>
+
+
+    <div class="content">
+
+        <a data-fancybox="gallery" href="cake-2.jpeg" data-caption="Caption for single image"><img src="cake-2.jpeg"
+                alt=""></a>
+        <a data-fancybox="gallery" href="cake-3.jpeg"><img src="cake-3.jpeg" alt=""></a>
+        <a data-fancybox="gallery" href="cupcake-1.jpeg"><img src="cupcake-1.jpeg" alt=""></a>
+    </div>
+
+
+</body>
+
+<script>
+
+
+    $(".content a").fancybox()
+    TweenMax.staggerFrom(
+        $('.content a'),// chon phan tu
+        3,// thoi gian chuyen dong
+        {
+            top: 100, opacity: 0
+        }
+        , 0.7// thoi gian cach nhau giua moi hieu ung
+
+    )
+</script>
+
+</html>

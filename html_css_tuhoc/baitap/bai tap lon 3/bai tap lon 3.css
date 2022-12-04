@@ -1,0 +1,259 @@
+
+:root{
+	--chieurongchinh:1000px;
+	--mauchutrangchinh:rgba(255,255,255,1);
+	--mauchutrangmo:rgba(255,255,255,0.5);
+	--mauchudenchinh:rgba(0,0,0,0.8);
+	--line-height-header:60px; 
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#header{
+	width: 100%;
+	height: 540px;
+	background-image:linear-gradient(0,rgba(0,0,0,0.65),rgba(0,0,0,0.65)) ,url("../bai tap lon 2/3-noi-that-hien-dai-nha-dep (1).jpg");
+	background-size: cover;
+	background-position: center;
+}
+#header #top_header{
+	width: 100%;
+	height: var(--line-height-li-header);
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+
+}
+#header #top_header #top_header_left{
+	width: 50%;
+	height: var(--line-height-li-header);}
+#header #top_header #top_header_left ul{
+		list-style: none;
+	}
+	#header #top_header #top_header_left ul li{
+		display: inline-block;
+	height: var(--line-height-li-header);
+		
+		padding-right: 20px
+	}
+	#header #top_header #top_header_left ul li i{
+		font-size: 24px;
+	}
+#header #top_header #top_header_right{
+	width: 50%;
+	height: 60px;
+	color: var(--mauchutrangchinh);
+	display: flex;
+	justify-content: flex-end;
+
+}
+#header #top_header #top_header_right i{
+	line-height: 60px;
+	font-size: 20px;
+}
+#header #footer_header{
+	width:100%;
+	margin: 0 auto;
+
+	text-align: center;
+	margin-top: 107px;
+}
+#header #footer_header #the_p1{
+	color: var(--mauchutrangchinh);
+	font-size: 45px;
+	letter-spacing: 8px;
+	word-spacing:9px;
+	margin-bottom: 15px;
+	font-weight: 200;
+}
+#header #footer_header #the_p2{
+		color: var(--mauchutrangmo);
+	font-size: 18px;
+	letter-spacing: 4px;
+	word-spacing:4px;
+	font-weight: 100;
+	margin-bottom: 15px;
+
+}
+#header #footer_header #the_p3{
+		color: var(--mauchutrangmo);
+	font-size: 18px;
+	letter-spacing: 5px;
+	word-spacing:5px;
+	font-weight: 100;
+	margin-bottom: 28px;
+
+}
+
+#header #footer_header hr{
+	width: 50px;
+	height: 0.5px;
+	border: 0.5px solid var(--mauchutrangmo);
+	margin:0 auto;
+margin-bottom: 28px;
+
+}
+#header #footer_header div {
+	color: var(--mauchutrangmo);
+}
+#header #footer_header div a{
+	text-decoration: none;
+	color: var(--mauchutrangmo);
+	padding: 5px 15px;
+	border:1px solid var(--mauchutrangmo);
+	border-radius: 5px;
+
+
+}
+#content #top_content {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 25px 0px; 
+}
+#content #top_content #thep1{
+	color: var(--mauchudenchinh);
+	font-size: 27px;
+	font-weight: bold;
+	margin-bottom: 18px;
+
+
+}
+#content #top_content #thep2{
+	color: rgba(0,0,0,0.6);
+	font-size: 15px;line-height: 25px;
+	
+}
+#content #top_content #thep3{
+	color: rgba(0,0,0,0.6);
+	font-size: 15px;
+
+}
+#content #footer_content{
+   width: 100%;
+	margin: 0 auto;
+	margin-bottom:100px;
+      
+}
+#content #footer_content ul{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+#content #footer_content ul li{
+	display: inline-block;
+	width: 28%;
+	min-height: 450px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+	box-shadow: 0px 0px  1px 1px grey;
+	
+	
+}
+#content #footer_content ul li #header_footer_content{
+   width: 100%;
+   height: 30%;
+   background-image:url("html5-1.jpg");
+   background-size: 100% 100%;
+}
+#content #footer_content ul li h4{
+	text-align: center;
+	color:var(--mauchudenchinh);
+	font-size: 18px;
+	
+}
+#content #footer_content ul li p{
+	padding:0 15px;
+	text-align: center;
+	font-size: 15px;
+	color: rgba(0,0,0,.5);
+
+}
+#content #footer_content ul li #div_a{
+	text-align: center;
+	margin-bottom:8px;
+
+}
+#content #footer_content ul li #div_a a{
+	padding: 5px 15px;
+	border: 1px solid rgba(0,0,0,.5) ;
+	color:black;
+	text-decoration: none;
+	color: rgba(0,0,0,.5);
+
+
+
+}
+.nav-mobile{
+	position:fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: white;
+		
+	transform: translateX(-100%);
+	display: none;
+
+
+
+}
+.nav-mobile .list-nav{
+
+	
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+
+
+
+
+}
+.nav-mobile .list-nav li{
+	padding: 20px ;
+	font-size: 16px;
+
+	
+
+
+}
+.overlay-screen{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+background-color: rgba(0,0,0,0.3);
+display: none;
+
+}
+.input-mobile:checked ~ .nav-mobile{
+  	animation: chuyendonglist linear 0.5s forwards;
+} 
+@keyframes chuyendonglist{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
+}
+.input-mobile:checked ~ .overlay-screen{
+	display: block;
+}
+
+

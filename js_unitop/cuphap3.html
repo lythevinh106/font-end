@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let my_arr = ["ly", "the", "vinh"];
+        let list_event = [
+            [1, 2, 3, 6],
+            ["ly", "gg", "ee"]
+        ];
+
+        let list_users = [{
+
+            name: "cuong",
+            age: 32,
+            gender: "male"
+        },
+
+        {
+            name: "cthe vinh",
+            age: 326,
+            gender: "male"
+        }
+
+        ]
+
+        //console.log(list_users);
+        // them phan tu vao dau mang : push(), cuoi mang la  unshift
+
+        my_arr.push(4444);
+
+        // xoa phan tu cuoi mang pop(),xoa phan tu dau mang la  shift
+        my_arr.shift();
+        console.log(my_arr);
+
+        // lay ra chieu dau cua mang la .lenght
+
+
+        // con cat la noi mang
+
+        let mang1 = [2, 5, 6];
+        let mang2 = ['2', '3', '4'];
+        let result = mang1.concat(mang2);
+        console.log(result);
+
+
+
+        //tin vi tri phan tu cua mang :  indexof : tra ve vi tri cua mang bat dau tu 0;
+        let color = ["red", "blue", "green"];
+        console.log(color.lastIndexOf("blue"));
+        console.log(color.lastIndexOf("blue", 2));// tim tu vi tri so 2
+
+
+
+        // xoa, them phan tu cua mang vs array.splice
+
+        let color2 = ["red", "blue", "green", "black"];
+        // color2.splice(1);// xoa vtri thu 1 den het
+        //color2.splice(1, 2)//xoa vtri thu 1 den so 2
+
+        color2.splice(1, 2, "gray", "yelooow")//xoa vtri thu 1 den so 2  r chen vao 
+        console.log(color2);
+
+
+
+        // sort : sap xep tang dan 
+
+        let list_number = [1, 6, 2, 3, 4, 9, 7];
+
+        let result2 = list_number.sort(function (a, b) {
+            return a - b;
+        });
+
+
+        let min = result2[0];
+        let max = result2[result2.length - 1]
+
+        console.log(result2);
+
+        // sap xep chuoi
+        let list_string = ["a", "d", "g", "h", "c", "b"];
+
+        console.log(list_string.sort());
+
+
+
+        //for each:https://viblo.asia/p/foreach-trong-javascript-jvElaPPAZkw
+
+
+        let list_number2 = [1, 6, 2, 3, 4, 9, 7];
+        let t = 0;
+        list_number2.forEach(function (value, index) {// index la key nhuw php
+            t += value;
+
+        });
+
+        console.log(t);
+
+
+        list_number2.forEach(function (value, index, arr) {// index la key nhuw php
+            arr[index] = value + 2; //cap nhat lai tung phan tu  + them 2
+
+        });
+
+
+        console.log(list_number2);
+
+
+
+        let list_number3 = [1, 6, 2, 3, 4, 9, 7];
+
+        ////map : xu li du lieu  voi tung phan tu cua mang tao ra 1 mang moi
+        let new_arr = list_number3.map(function (value) {
+
+            return value * 2;// moi so trong mang  *2
+        })
+
+        console.log(new_arr);
+
+
+
+
+
+        //fillter : loc du lieu cua mang
+
+        let list_number4 = [1, 6, 2, 3, 4, 9, 7];
+
+
+        let result3;
+        function check_odd(value) {
+
+            return value % 2 != 0;
+        }
+        result3 = list_number4.filter(check_odd);
+        console.log(result3);
+
+
+        //tach chuoi thanh mang trong js
+        let = my_str = "ly the vinh";
+
+        let result4 = my_str.split(" ");
+        let result5 = my_str.split(" ", 2);// tách ra thanh mảng và chỉ đưa 2 phần tử đàu tiên vào
+
+        console.log(result4);
+
+
+
+        // noi mang tao thanh chuoi
+
+        let my_info = ["my", "name", "is", "vinh"];
+        console.log(my_info.join(" "));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
