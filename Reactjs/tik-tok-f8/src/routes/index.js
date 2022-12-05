@@ -21,7 +21,7 @@ export const publicRoutes = [
   },
   {
     path: routes.live,
-    component: Profile,
+    component: live,
   },
 
   {

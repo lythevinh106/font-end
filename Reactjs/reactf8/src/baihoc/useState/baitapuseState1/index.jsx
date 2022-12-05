@@ -25,6 +25,7 @@ function BtState(props) {
         console.log(index)
         setGifts(gifts[index]);
     }
+    
 
     return (
         <div style={{ padding: 32 }}>

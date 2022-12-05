@@ -51,6 +51,8 @@ export const {
   hideMiniCart,
   addToCart,
   setQuantity,
+  
+  
   RemoveFromCart,
 } = actions;
 export default cartSlice.reducer;

@@ -36,6 +36,7 @@ function AddToCartForm({ onSubmit }) {
                 <input type="text" name="quantity"  {...form.register("quantity")} label="Email" />
                 <button type="submit">buy</button>
             </form>
+            <></>
         </div>
     );
 }
