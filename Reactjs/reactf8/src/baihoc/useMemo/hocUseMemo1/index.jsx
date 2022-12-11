@@ -58,7 +58,7 @@ function HocUseMemo1(props) {
         }, 0);
 
         return result
-
+        //////use memo thuong su dung de tinh toan khac vs useeffect
     }, [products]);////khi cái products này có sự thay đổi thì ms làm, or mun su dung 1 lan []
 
 
