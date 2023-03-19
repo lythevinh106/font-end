@@ -1,0 +1,27 @@
+.wrapper {
+  border-top: 1px solid #ccc;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  border-radius: 50%;
+  height: 32px;
+}
+
+.item-info {
+  flex: 1;
+  line-height: 1;
+  margin-left: 12px;
+}
+
+.more-btn {
+  font-size: 1.4rem;
+  color: #fe2c55;
+  padding: 8px;
+  font-weight: 600;
+}/*# sourceMappingURL=SuggestAccounts.module.css.map */

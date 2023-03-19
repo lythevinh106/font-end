@@ -1,0 +1,104 @@
+// $border: 1px solid red;
+
+
+@mixin nav($border: 1px solid yellow, $bg_color: green) {
+    background-color: $bg_color;
+    border: $border;
+
+
+}
+
+
+.box1 {
+    width: 400px;
+    height: 300px;
+    color: #fff;
+    @include nav(4px solid pink, yellow);
+}
+
+
+
+@mixin nav2($border: 1px solid yellow, $bg_color: green) {
+    background-color: $bg_color;
+    border: $border;
+    @content
+}
+
+.box2 {
+    padding: 40px;
+    color: black;
+    font-size: 50px;
+    width: 600px;
+    height: 400px;
+
+    @include nav2(2px solid red, orange) {
+        width: 100px;
+        height: 100px;
+
+        ///có thể ghi đè ở đây
+
+    }
+}
+
+
+
+@mixin mobileResponsive() {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+
+}
+
+
+
+
+.box3 {
+    @include nav2;
+
+
+    // khi mixin kèm vs content nó giống như 1 cái khuông mẫu
+}
+
+
+
+//////function
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+
+@function double($pixel) {
+    @return $pixel *2;
+}
+
+.box4 {
+    background-color: red;
+
+    width: double(100px);
+    height: 100px;
+
+}
+
+@function sum2($numbers...) {
+
+    $sum: 0px;
+
+    @each $number in $numbers {
+
+        $sum: $sum +$number;
+    }
+
+    @return $sum;
+
+}
+
+
+.box5 {
+    background-color: pink;
+
+    width: sum2(20px, 50px, 350px);
+    height: 100px;
+
+}

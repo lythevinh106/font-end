@@ -58,11 +58,6 @@ function HocEffect1(props) {
 
 
 
-
-
-
-
-
     ///////note-chung cho 3 TH:
     /*
     -callback cua tat ca truong hop lun dc goi sau khi component mounted(ddc gắn);

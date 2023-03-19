@@ -1,0 +1,41 @@
+.wrapper {
+  font-size: 1.6rem;
+  min-width: 100px;
+  padding: 9px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.wrapper + .wrapper {
+  margin-left: 5px;
+}
+.wrapper.disabled {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  opacity: 0.1;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: white !important;
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--primary) !important;
+  border-color: var(--primary);
+}
+
+.small {
+  min-width: 88px;
+  padding: 4px 8px;
+}
+
+.large {
+  min-width: 100px;
+  padding: 14px 16px;
+}
+
+.custom-login {
+  background-color: palegreen;
+}/*# sourceMappingURL=Button.module.css.map */

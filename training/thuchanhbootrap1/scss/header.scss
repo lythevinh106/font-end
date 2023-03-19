@@ -1,0 +1,169 @@
+.wrapper {
+
+    .header-wrapper {
+        background-image: url('/images/banner.jpg');
+        background-position: 50% 25%;
+        // padding-top: 17rem;
+        // padding-bottom: 12.5rem;
+        // min-height: 742px;
+        min-height: 942px;
+        background-position: 27% 22%;
+        ;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        /////header
+        .header {
+
+
+
+
+            &__top {
+
+
+
+                .header__top__logo {
+                    img {
+                        width: 188px;
+                        height: auto;
+                    }
+
+
+
+
+
+
+
+
+                }
+
+                .container {
+
+
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    // padding: 1.5rem;
+                    padding: 12px 0px;
+
+                    .header__top__logo {
+                        img {
+                            width: 188px;
+                            height: auto;
+                        }
+
+
+
+
+                    }
+
+                    .header__top__list {
+
+
+                        color: #fff;
+                        letter-spacing: 0.0625em;
+                        font-size: 0.95rem;
+                        display: flex;
+
+
+
+                        li {
+                            padding: 8px;
+                            vertical-align: center;
+
+
+                            &:not(:nth-last-child(1)) {
+                                margin-left: 16px;
+                            }
+                        }
+
+                    }
+                }
+
+                &.sticky {
+                    background-color: #212529;
+                    position: sticky;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+
+                    .header__top__logo {
+                        img {
+                            width: 120px;
+                            height: auto;
+                        }
+
+
+
+
+                    }
+
+
+                    .header__top__list {
+
+
+                        color: #fff;
+                        letter-spacing: 0.0625em;
+
+                        display: flex;
+
+
+                        li {
+                            font-size: 0.85rem;
+                        }
+
+
+
+                    }
+                }
+            }
+
+
+            .header__content {
+                text-align: center;
+                color: #fff;
+                margin-top: 207px;
+
+                .header__title {
+
+                    font-size: 2.25rem;
+                    font-style: italic;
+                    line-height: 2.25rem;
+                    margin-bottom: 2rem;
+
+                }
+
+                .header__desc {
+                    font-size: 4.5rem;
+                    font-weight: 700;
+                    line-height: 4.5rem;
+                    margin-bottom: 4rem;
+                }
+
+                .header__btn {
+                    padding: 1.25rem 2.5rem;
+                }
+
+
+            }
+
+
+
+
+        }
+    }
+}
+
+
+
+
+// .animate__backInDown {
+
+
+
+//     animation: bounce;
+//     /* referring directly to the animation's @keyframe declaration */
+//     animation-duration: 4s;
+//     /* don't forget to set a duration! */
+// }

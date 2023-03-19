@@ -29,16 +29,12 @@ function HocEffect3(props) {
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/${type}`).
             then(res => res.json()).then(posts => {
-
                 setPosts(posts)////neu sử dụng TH 1: thì nó sẽ lặp vô hạn vì setPost nó sẽ gọi lại liên tục
-
 
             })
         // console.log("giua");
     }, [type])////se dc goi lại mỗi khi type thay đổi
     ////hàm dọn dẹp (nếu có) sẽ chạy trước khi cái call back ở trên chạy
-
-
 
     ///////sử dụng với dom event
 
@@ -53,10 +49,6 @@ function HocEffect3(props) {
             nếu dữ liệu k thay đổi thì nó sẽ k re render
             */
 
-
-
-
-
             ///đây là cleanup function : hàm dọn dẹp tránh rò rỉ bộ nhớ sau khi unmouted rồi lại mounted lại
             /// được gọi trước khi component đó đc unmouted
             /// cái này lun được gọi trước khi call back được gọi(trừ lần đc mouted (tức là lần đầu tiên))
@@ -65,7 +57,7 @@ function HocEffect3(props) {
 
                 console.log("ham don dep");
 
-                window.removeEventListener("scroll", handleScroll);
+              window.removeEventListener("scroll", handleScroll);
 
             }
         }

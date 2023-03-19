@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+</head>
+
+
+
+<style>
+    .box {
+
+        width: 100%;
+        height: 100vh;
+
+        background-color: yellowgreen;
+
+    }
+
+
+
+    .box__item {
+
+        width: 200px;
+        height: 200px;
+    }
+
+
+    .box__item:nth-child(1) {
+        background-color: red;
+        transition: all 2s linear;
+    }
+
+    .box__item:nth-child(1):hover {
+        background-color: yellow;
+        position: relative;
+        transform: translateX(500px);
+    }
+
+
+    .box__item:nth-child(1)~.box__item {
+        background-color: blueviolet;
+        transform: translateX(500px);
+
+    }
+
+    .box__item:nth-child(1)~.box__item:hover {
+
+        background-color: green;
+        animation: animateDemo 5s
+    }
+
+    @keyframes animateDemo {
+        0% {}
+
+        50% {
+            width: 150px;
+            transform: translateX(50px);
+            background-color: aqua;
+        }
+
+        75% {
+            width: 100px;
+            background-color: black;
+
+        }
+
+        100% {
+            background-color: green;
+            width: 200px;
+
+        }
+    }
+</style>
+
+<body>
+
+    <div class="box">
+        <div class="box__item">box1</div>
+        <div class="box__item">box2</div>
+    </div>
+</body>
+
+</html>

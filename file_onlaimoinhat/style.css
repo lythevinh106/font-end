@@ -346,14 +346,16 @@ body {
 .content-home__slider .slider-for {
   margin: 20px 20px;
   height: 400px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 600px;
   position: relative;
   left: 60%;
   transform: translateX(-50%);
 }
 .content-home__slider div img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
@@ -475,8 +477,7 @@ body {
   right: 0;
 }
 .back-to-top img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

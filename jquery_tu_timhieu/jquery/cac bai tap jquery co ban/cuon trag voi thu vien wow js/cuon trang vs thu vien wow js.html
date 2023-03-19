@@ -8,7 +8,11 @@
     <title>Document</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!--<script type="text/javascript" src="WOW.js"> </script>-->
-    <link rel="stylesheet" href="animate.css">
+
+
+    <!-- <link rel="stylesheet" href="animate.css"> -->
+    <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
     <!--chen thu vien css animate-->
 </head>
 
@@ -81,6 +85,10 @@
         visibility: visible;
         opacity: 1;
     }
+
+    img {
+        height: 400px;
+    }
 </style>
 
 <body>
@@ -94,20 +102,42 @@
 
 
     <div class="content">
-        <img src="cake-2.jpeg">
+        <img class="hinh-2 wow bounceInLeft" src="cake-2.jpeg">
         <img class="hinh-2 wow bounceInLeft" data-wow-delay="1s" src="cake-3.jpeg">
-        <img class="hinh-3 wow  bounceInUp" src="cupcake-1.jpeg">
+        <img class="hinh-3 wow bounceInLeft" src="cupcake-1.jpeg">
+        <img class="hinh-2 wow bounceInLeft" src="cake-2.jpeg">
+        <img class="hinh-3 wow bounceInLeft" src="cupcake-1.jpeg">
+        <img class="hinh-2 wow bounceInRight" src="cake-2.jpeg">
     </div>
 
 
     <button>backtotop</button>
     <script type="text/javascript" src="wow.min.js"></script>
-    <script type="text/javascript">// su dung thu vien o day:https://wowjs.uk/docs.html
 
-        new WOW().init();
-
-    </script>
 </body>
+
+<script type="text/javascript">// su dung thu vien o day:https://wowjs.uk/docs.html
+
+
+
+    var wow = new WOW(
+        {
+            boxClass: 'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0,          // distance to the element when triggering the animation (default is 0)
+            mobile: true,       // trigger animations on mobile devices (default is true)
+            live: true,       // act on asynchronously loaded content (default is true)
+            callback: function (box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
+
+</script>
 
 
 

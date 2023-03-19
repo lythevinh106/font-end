@@ -1,0 +1,45 @@
+.wrapper {
+  --search-border-radius: 92px;
+  --search-height: 46px;
+  width: 100%;
+  height: var(--default-layout-header-height, 60px);
+  box-shadow: 0px 1px 1px black;
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  height: 100%;
+  width: var(--default-layout-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.more-btn {
+  font-size: 2rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu {
+  width: 224px;
+}
+
+.actions {
+  display: flex;
+}
+
+.action-btn {
+  background-color: transparent;
+  font-size: 2.6rem;
+  padding: 4px 16px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}/*# sourceMappingURL=Header.module.css.map */

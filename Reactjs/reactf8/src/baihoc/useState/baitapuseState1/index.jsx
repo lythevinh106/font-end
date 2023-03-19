@@ -18,10 +18,7 @@ function BtState(props) {
 
 
     const randomGift = () => {
-
-
         const index = Math.floor(Math.random() * gifts.length);
-
         console.log(index)
         setGifts(gifts[index]);
     }

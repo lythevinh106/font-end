@@ -64,7 +64,6 @@
 }
 .back-to-top img {
   width: 100%;
-  object-fit: cover;
-}
-
-/*# sourceMappingURL=orther.css.map */
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=orther.css.map */

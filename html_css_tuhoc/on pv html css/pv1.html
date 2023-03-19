@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pv1</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    :root {
+        --space: 2px
+    }
+
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -(var(--space));
+        background-color: yellow;
+
+    }
+
+    .box__item {
+        width: calc(25% - (var(--space)*2));
+        background-color: red;
+        margin: var(--space);
+
+        /* calc(20% - (var(--spacing-product-item)*2)); */
+
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="box__item">box 1</div>
+        <div class="box__item">box 2</div>
+        <div class="box__item">box 3</div>
+        <div class="box__item">box 4</div>
+        <div class="box__item">box 5</div>
+        <div class="box__item">box 3</div>
+        <div class="box__item">box 4</div>
+        <div class="box__item">box 5</div>
+    </div>
+</body>
+
+</html>

@@ -24,12 +24,8 @@ const Courses = [
 ]
 
 function BtState2(props) {
-
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-
-
-
     const handleSubmit = () => {
 
         console.log(name, email);

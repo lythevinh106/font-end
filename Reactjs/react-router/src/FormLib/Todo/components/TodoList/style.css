@@ -1,0 +1,9 @@
+ul > li {
+  cursor: pointer;
+}
+ul > li.completed {
+  color: red;
+}
+ul > li.new {
+  color: black;
+}/*# sourceMappingURL=style.css.map */

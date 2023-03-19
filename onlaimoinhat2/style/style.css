@@ -31,7 +31,8 @@ html {
   right: -100.05%;
   top: -1.15%;
   bottom: 89.22%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .header-top {
   padding-top: 33px;
@@ -195,7 +196,8 @@ html {
 }
 .content-home-service__box-item-img img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .content-home-service__box-item-title {
   margin-top: 30px;
@@ -250,7 +252,8 @@ html {
 .content-home__customer-support-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .content-home__customer-support-main {
   width: 40%;
@@ -493,7 +496,8 @@ html {
 }
 .content-home__help-main-option li .home__help-main-option-icon img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .content-home__help-main-option li .home__help-main-option-main {
   margin-left: 20px;
@@ -519,7 +523,8 @@ html {
   border-bottom-left-radius: 50px;
   width: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .content-home__features {
   margin-top: 50px;
@@ -572,7 +577,8 @@ html {
 .content-home__features-main-item:nth-child(1) img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .content-home__features-main-item:nth-child(2) {
   width: 37%;
@@ -580,7 +586,8 @@ html {
 .content-home__features-main-item:nth-child(2) img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .content-home__features-main-item:nth-child(3) {
   width: 28%;
@@ -588,7 +595,8 @@ html {
 .content-home__features-main-item:nth-child(3) img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .content-home__question {
   margin-top: 150px;
@@ -642,6 +650,4 @@ html {
 
 .hideshowpara {
   height: 100%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

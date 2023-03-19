@@ -1,0 +1,108 @@
+/*# sourceMappingURL=style.scss.map */
+
+@import "other.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nerko+One&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    // font-family: "Inter";
+    // font-family: 'Inter', sans-serif;
+    // font-family: 'Nerko One', cursive;
+    // font-family: 'Sansita Swashed', cursive;
+}
+
+html,
+body {
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+ul {
+    list-style: none;
+
+    li {
+        list-style: none;
+    }
+}
+
+$c_orange_main: #F73D27;
+$c_white_main: #ffff;
+$c_black_main: #000000;
+
+$_C_yellow_main: #FFC71F;
+
+.container-fluid {
+    max-width: 100%;
+
+}
+
+.container {
+    max-width: 1160px;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.btn {
+    border: none;
+    background: none;
+    text-align: center;
+    background-color: transparent;
+    color: $c_white_main;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+}
+
+.col {
+    padding: 0 10px;
+
+
+}
+
+
+.c-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
+
+.c-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.hide-on-pc {
+    display: none;
+}
+
+@media only screen and (max-width:800px) {
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .sm-10 {
+        flex: 0 0 83.33%;
+        max-width: 83.33%;
+    }
+
+    .sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+@import "./header.scss"
